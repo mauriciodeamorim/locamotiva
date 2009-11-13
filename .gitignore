@@ -1,0 +1,17 @@
+.DS_Store
+**/pkg
+**/doc
+schema.rb
+pkg
+doc
+*~
+*swp
+*swo
+*.gem
+*.tmproj
+log/*.log
+tmp/**/*
+config/database.yml
+coverage/*
+coverage.data
+db/*.sqlite3
