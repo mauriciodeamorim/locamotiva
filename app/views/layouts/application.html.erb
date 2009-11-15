@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Locamotiva</title>  
+  <%= stylesheet_link_tag 'locamotiva' %>
+</head>
+
+<body>
+  <div id="menu">
+		<ul>
+				<li></li>
+				<li><%= link_to "Home", results_path %></li>
+		    <li>|</li>
+				<li><%= link_to "Provas", races_path %></li>
+		    <li>|</li>
+				<li><%= link_to "Atletas", runners_path %></li>
+		</ul>
+  </div>
+
+	<div id="logo"><%= link_to "Locamotiva", races_path %></div>		
+
+	<div id="content" class="internal">
+		<%= yield  %>
+	</div>
+
+	<p style="color: green"><%= flash[:notice] %></p>
+
+	<div id="footer">
+		<ul>
+				<li><%= link_to "Home", results_path %></li>
+		    <li> | </li>
+				<li><%= link_to "Provas", races_path %></li>
+		    <li> | </li>
+				<li><%= link_to "Atletas", runners_path %></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+<div id="search" style="visibility:hidden;">
+  <form action="/search" id="top_search_form" method="get">
+      Busca <input name="q" type="search"> <input value="Search" type="submit">
+  </form>
+</div>
