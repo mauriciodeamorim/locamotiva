@@ -1,10 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :results
-
   map.resources :runners
-
   map.resources :races
 
+  map.root :controller => "results"
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
