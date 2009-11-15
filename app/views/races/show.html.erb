@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @race.name %>
+</p>
+
+<p>
+  <b>Stage:</b>
+  <%=h @race.stage %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @race.date %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%=h @race.place %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%=h @race.distance %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @race.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_race_path(@race) %> |
+<%= link_to 'Back', races_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  stage: MyString
+  date: 2009-11-14 22:03:22
+  place: MyString
+  distance: MyString
+  url: MyString
+
+two:
+  name: MyString
+  stage: MyString
+  date: 2009-11-14 22:03:22
+  place: MyString
+  distance: MyString
+  url: MyString

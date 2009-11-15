@@ -1,0 +1,67 @@
+<h1>New result</h1>
+
+<% form_for(@result) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :start_number %><br />
+    <%= f.text_field :start_number %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :team %><br />
+    <%= f.text_field :team %>
+  </p>
+  <p>
+    <%= f.label :liquid_time %><br />
+    <%= f.datetime_select :liquid_time %>
+  </p>
+  <p>
+    <%= f.label :official_time %><br />
+    <%= f.datetime_select :official_time %>
+  </p>
+  <p>
+    <%= f.label :class_general %><br />
+    <%= f.text_field :class_general %>
+  </p>
+  <p>
+    <%= f.label :class_sex %><br />
+    <%= f.text_field :class_sex %>
+  </p>
+  <p>
+    <%= f.label :class_category %><br />
+    <%= f.text_field :class_category %>
+  </p>
+  <p>
+    <%= f.label :pace %><br />
+    <%= f.datetime_select :pace %>
+  </p>
+  <p>
+    <%= f.label :distance %><br />
+    <%= f.text_field :distance %>
+  </p>
+  <p>
+    <%= f.label :substitute %><br />
+    <%= f.text_field :substitute %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.label :race_id %><br />
+    <%= f.text_field :race_id %>
+  </p>
+  <p>
+    <%= f.label :runner_id %><br />
+    <%= f.text_field :runner_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', results_path %>
