@@ -3,9 +3,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :runners
   map.resources :races, :only => :index
 
-#  map.connect '', :controller => 'results'
   map.root :controller => "results"
-  map.connect 'admin/races/new', :controller => 'admin/races', :action => 'new'
+
+  map.connect 'admin/', :controller => 'admin/races'
+
+  map.namespace :admin do |admin|
+   admin.resources :races
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -30,12 +35,6 @@ ActionController::Routing::Routes.draw do |map|
   #     products.resources :comments
   #     products.resources :sales, :collection => { :recent => :get }
   #   end
-
-  # Sample resource route within a namespace:
-     map.namespace :admin do |admin|
-       # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-       admin.resources :races
-     end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   # map.root :controller => "welcome"
