@@ -1,0 +1,12 @@
+#race_name_front {
+    float:left;
+    padding-top:20px;
+    text-decoration: none;
+}
+
+#race_distance_front {
+    float:left;
+    padding-top:20px;
+    padding-left:20px; 
+    color:black;
+}
