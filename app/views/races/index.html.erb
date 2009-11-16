@@ -1,30 +1,12 @@
-<h1>Listing races</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Stage</th>
-    <th>Date</th>
-    <th>Place</th>
-    <th>Distance</th>
-    <th>Url</th>
-  </tr>
-
-<% @races.each do |race| %>
-  <tr>
-    <td><%=h race.name %></td>
-    <td><%=h race.stage %></td>
-    <td><%=h race.date %></td>
-    <td><%=h race.place %></td>
-    <td><%=h race.distance %></td>
-    <td><%=h race.url %></td>
-    <td><%= link_to 'Show', race %></td>
-    <td><%= link_to 'Edit', edit_race_path(race) %></td>
-    <td><%= link_to 'Destroy', race, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% for race in @races %>
+	<div class="dateBox">
+		<div class="date">
+	    <div class="bigDate"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
+	    <div class="bigDate"><% if race.date %><%= race.date.strftime('%b') %><% end %></div>
+		</div>
+		<div class="countdown"> </div>
+	</div>
+	<h1 id='race_name_front'><%= link_to race.name, result_path(race.id) %></h1>
+  <h1 id='race_distance_front'><%=h race.distance %></h1>
+	<div style="clear:left"></div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New race', new_race_path %>
