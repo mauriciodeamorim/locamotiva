@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/races/index.html.erb" do
+describe "admin/races/index.html.erb" do
   include RacesHelper
 
   before(:each) do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RacesController do
+describe Admin::RacesController do
 
   def mock_race(stubs={})
     @mock_race ||= mock_model(Race, stubs)
@@ -50,7 +50,7 @@ describe RacesController do
       it "redirects to the created race" do
         Race.stub!(:new).and_return(mock_race(:save => true))
         post :create, :race => {}
-        response.should redirect_to(race_url(mock_race))
+        response.should redirect_to(admin_race_url())
       end
     end
 
@@ -88,7 +88,7 @@ describe RacesController do
       it "redirects to the race" do
         Race.stub!(:find).and_return(mock_race(:update_attributes => true))
         put :update, :id => "1"
-        response.should redirect_to(race_url(mock_race))
+        response.should redirect_to(admin_race_url(mock_race))
       end
     end
 
@@ -124,7 +124,7 @@ describe RacesController do
     it "redirects to the races list" do
       Race.stub!(:find).and_return(mock_race(:destroy => true))
       delete :destroy, :id => "1"
-      response.should redirect_to(races_url)
+      response.should redirect_to(admin_races_url)
     end
   end
 

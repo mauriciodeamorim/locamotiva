@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/races/new.html.erb" do
+describe "admin/races/new.html.erb" do
   include RacesHelper
 
   before(:each) do
@@ -17,7 +17,7 @@ describe "/races/new.html.erb" do
   it "renders new race form" do
     render
 
-    response.should have_tag("form[action=?][method=post]", races_path) do
+    response.should have_tag("form[action=?][method=post]", admin_races_path) do
       with_tag("input#race_name[name=?]", "race[name]")
       with_tag("input#race_stage[name=?]", "race[stage]")
       with_tag("input#race_place[name=?]", "race[place]")
