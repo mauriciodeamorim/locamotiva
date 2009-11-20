@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :athletes
   map.resources :results
-  map.resources :runners, :only => :index
   map.resources :races, :only => :index
 
   map.root :controller => "results"
@@ -9,7 +8,6 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'admin/', :controller => 'admin/races'
 
   map.namespace :admin do |admin|
-   admin.resources :runners
    admin.resources :races
    admin.resources :athletes
   end

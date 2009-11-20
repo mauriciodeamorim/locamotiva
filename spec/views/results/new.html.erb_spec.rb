@@ -16,7 +16,7 @@ describe "/results/new.html.erb" do
       :substitute => "value for substitute",
       :notes => "value for notes",
       :race_id => 1,
-      :runner_id => 1
+      :athlete_id => 1
     )
   end
 
@@ -34,7 +34,7 @@ describe "/results/new.html.erb" do
       with_tag("input#result_substitute[name=?]", "result[substitute]")
       with_tag("textarea#result_notes[name=?]", "result[notes]")
       with_tag("input#result_race_id[name=?]", "result[race_id]")
-      with_tag("input#result_runner_id[name=?]", "result[runner_id]")
+      with_tag("input#result_athlete_id[name=?]", "result[athlete_id]")
     end
   end
 end

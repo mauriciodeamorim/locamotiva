@@ -14,7 +14,7 @@ one:
   substitute: MyString
   notes: MyText
   race_id: 1
-  runner_id: 1
+  athlete_id: 1
 
 two:
   start_number: MyString
@@ -30,4 +30,4 @@ two:
   substitute: MyString
   notes: MyText
   race_id: 1
-  runner_id: 1
+  athlete_id: 1

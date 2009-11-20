@@ -16,7 +16,7 @@ describe Result do
       :substitute => "value for substitute",
       :notes => "value for notes",
       :race_id => 1,
-      :runner_id => 1
+      :athlete_id => 1
     }
   end
 

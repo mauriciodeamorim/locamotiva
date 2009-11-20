@@ -15,7 +15,7 @@
     <th>Substitute</th>
     <th>Notes</th>
     <th>Race</th>
-    <th>Runner</th>
+    <th>athlete</th>
   </tr>
 
 <% @results.each do |result| %>
@@ -33,7 +33,7 @@
     <td><%=h result.substitute %></td>
     <td><%=h result.notes %></td>
     <td><%=h result.race_id %></td>
-    <td><%=h result.runner_id %></td>
+    <td><%=h result.athlete_id %></td>
     <td><%= link_to 'Show', result %></td>
     <td><%= link_to 'Edit', edit_result_path(result) %></td>
     <td><%= link_to 'Destroy', result, :confirm => 'Are you sure?', :method => :delete %></td>

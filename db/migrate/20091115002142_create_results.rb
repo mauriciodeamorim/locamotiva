@@ -14,7 +14,7 @@ class CreateResults < ActiveRecord::Migration
       t.string :substitute
       t.text :notes
       t.integer :race_id
-      t.integer :runner_id
+      t.integer :athlete_id
 
       t.timestamps
     end

@@ -16,7 +16,7 @@ describe "/results/index.html.erb" do
         :substitute => "value for substitute",
         :notes => "value for notes",
         :race_id => 1,
-        :runner_id => 1
+        :athlete_id => 1
       ),
       stub_model(Result,
         :start_number => "value for start_number",
@@ -29,7 +29,7 @@ describe "/results/index.html.erb" do
         :substitute => "value for substitute",
         :notes => "value for notes",
         :race_id => 1,
-        :runner_id => 1
+        :athlete_id => 1
       )
     ]
   end
