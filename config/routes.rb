@@ -1,6 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :athletes
-
   map.resources :results
   map.resources :runners, :only => :index
   map.resources :races, :only => :index
@@ -12,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
    admin.resources :runners
    admin.resources :races
+   admin.resources :athletes
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
