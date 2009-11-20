@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :athletes
+
   map.resources :results
   map.resources :runners, :only => :index
   map.resources :races, :only => :index
