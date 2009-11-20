@@ -1,4 +1,4 @@
-class Admin::RacesController < Admin::ApplicationController
+class Admin::RacesController < ApplicationController
   # GET /races
   # GET /races.xml
   def index

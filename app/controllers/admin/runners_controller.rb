@@ -45,7 +45,7 @@ class Admin::RunnersController < ApplicationController
     respond_to do |format|
       if @runner.save
         flash[:notice] = 'Runner was successfully created.'
-        format.html { redirect_to(@runner) }
+        format.html { redirect_to(admin_runners_url) }
         format.xml  { render :xml => @runner, :status => :created, :location => @runner }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class Admin::RunnersController < ApplicationController
     respond_to do |format|
       if @runner.update_attributes(params[:runner])
         flash[:notice] = 'Runner was successfully updated.'
-        format.html { redirect_to(@runner) }
+        format.html { redirect_to(admin_runners_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class Admin::RunnersController < ApplicationController
     @runner.destroy
 
     respond_to do |format|
-      format.html { redirect_to(runners_url) }
+      format.html { redirect_to(admin_runners_url) }
       format.xml  { head :ok }
     end
   end
