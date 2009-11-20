@@ -50,7 +50,7 @@ describe Admin::RacesController do
       it "redirects to the created race" do
         Race.stub!(:new).and_return(mock_race(:save => true))
         post :create, :race => {}
-        response.should redirect_to(admin_race_url())
+        response.should redirect_to(admin_races_url())
       end
     end
 
@@ -88,7 +88,7 @@ describe Admin::RacesController do
       it "redirects to the race" do
         Race.stub!(:find).and_return(mock_race(:update_attributes => true))
         put :update, :id => "1"
-        response.should redirect_to(admin_race_url(mock_race))
+        response.should redirect_to(show_admin_race_url)
       end
     end
 
