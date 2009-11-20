@@ -20,13 +20,13 @@
     <td><%=h athlete.phone %></td>
     <td><%=h athlete.nick %></td>
     <td><%=h athlete.email %></td>
-    <td><%= link_to 'Show', athlete %></td>
-    <td><%= link_to 'Edit', edit_athlete_path(athlete) %></td>
-    <td><%= link_to 'Destroy', athlete, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_athlete_path(athlete) %></td>
+    <td><%= link_to 'Edit', edit_admin_athlete_path(athlete) %></td>
+    <td><%= link_to 'Destroy', admin_athlete_path(athlete), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New athlete', new_athlete_path %>
+<%= link_to 'New athlete', new_admin_athlete_path %>

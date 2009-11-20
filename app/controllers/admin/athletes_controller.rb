@@ -1,4 +1,4 @@
-class AthletesController < ApplicationController
+class Admin::AthletesController < ApplicationController
   # GET /athletes
   # GET /athletes.xml
   def index
@@ -45,7 +45,7 @@ class AthletesController < ApplicationController
     respond_to do |format|
       if @athlete.save
         flash[:notice] = 'Athlete was successfully created.'
-        format.html { redirect_to(@athlete) }
+        format.html { redirect_to(admin_athletes_url) }
         format.xml  { render :xml => @athlete, :status => :created, :location => @athlete }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class AthletesController < ApplicationController
     respond_to do |format|
       if @athlete.update_attributes(params[:athlete])
         flash[:notice] = 'Athlete was successfully updated.'
-        format.html { redirect_to(@athlete) }
+        format.html { redirect_to(admin_athletes_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class AthletesController < ApplicationController
     @athlete.destroy
 
     respond_to do |format|
-      format.html { redirect_to(athletes_url) }
+      format.html { redirect_to(admin_athletes_url) }
       format.xml  { head :ok }
     end
   end

@@ -1,6 +1,6 @@
 <h1>Editing athlete</h1>
 
-<% form_for(@athlete) do |f| %>
+<% form_for :athlete, @athlete, :url => admin_athlete_path(@athlete), :html => { :method => :put } do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -36,5 +36,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @athlete %> |
-<%= link_to 'Back', athletes_path %>
+<%= link_to 'Show', admin_athlete_path(@athlete) %> |
+<%= link_to 'Back', admin_athletes_path %>
