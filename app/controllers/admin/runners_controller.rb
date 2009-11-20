@@ -1,4 +1,4 @@
-class RunnersController < ApplicationController
+class Admin::RunnersController < ApplicationController
   # GET /runners
   # GET /runners.xml
   def index

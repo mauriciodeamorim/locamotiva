@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace :admin do |admin|
    admin.resources :races
+   admin.resources :runners
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
