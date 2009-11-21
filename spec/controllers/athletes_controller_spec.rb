@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AthletesController do
+describe Admin::AthletesController do
 
   def mock_athlete(stubs={})
     @mock_athlete ||= mock_model(Athlete, stubs)
@@ -50,7 +50,7 @@ describe AthletesController do
       it "redirects to the created athlete" do
         Athlete.stub!(:new).and_return(mock_athlete(:save => true))
         post :create, :athlete => {}
-        response.should redirect_to(athlete_url(mock_athlete))
+        response.should redirect_to(admin_athlete_url(mock_athlete))
       end
     end
 
@@ -87,8 +87,8 @@ describe AthletesController do
 
       it "redirects to the athlete" do
         Athlete.stub!(:find).and_return(mock_athlete(:update_attributes => true))
-        put :update, :id => "1"
-        response.should redirect_to(athlete_url(mock_athlete))
+        put :update, :id => mock_athlete
+        response.should redirect_to(admin_athlete_url)
       end
     end
 
@@ -124,7 +124,7 @@ describe AthletesController do
     it "redirects to the athletes list" do
       Athlete.stub!(:find).and_return(mock_athlete(:destroy => true))
       delete :destroy, :id => "1"
-      response.should redirect_to(athletes_url)
+      response.should redirect_to(admin_athletes_url)
     end
   end
 

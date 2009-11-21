@@ -62,7 +62,7 @@ class Admin::AthletesController < ApplicationController
     respond_to do |format|
       if @athlete.update_attributes(params[:athlete])
         flash[:notice] = 'Athlete was successfully updated.'
-        format.html { redirect_to(admin_athletes_url) }
+        format.html { redirect_to(admin_athlete_url(@athlete)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
