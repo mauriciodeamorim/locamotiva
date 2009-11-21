@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/athletes/edit.html.erb" do
+describe "admin/athletes/edit.html.erb" do
   include AthletesHelper
 
   before(:each) do
@@ -18,7 +18,7 @@ describe "/athletes/edit.html.erb" do
   it "renders the edit athlete form" do
     render
 
-    response.should have_tag("form[action=#{athlete_path(@athlete)}][method=post]") do
+    response.should have_tag("form[action=#{admin_athlete_path(@athlete)}][method=post]") do
       with_tag('input#athlete_name[name=?]', "athlete[name]")
       with_tag('input#athlete_sex[name=?]', "athlete[sex]")
       with_tag('input#athlete_cpf[name=?]', "athlete[cpf]")

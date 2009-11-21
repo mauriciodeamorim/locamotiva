@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "races/index.html.erb" do
+describe "admin/races/index.html.erb" do
   include RacesHelper
 
   before(:each) do
@@ -24,7 +24,10 @@ describe "races/index.html.erb" do
 
   it "renders a list of races" do
     render
-    response.should have_tag("h1", "value for name".to_s, 2)
-    response.should have_tag("h1", "value for distance".to_s, 2)
+    response.should have_tag("tr>td", "value for name".to_s, 2)
+    response.should have_tag("tr>td", "value for stage".to_s, 2)
+    response.should have_tag("tr>td", "value for place".to_s, 2)
+    response.should have_tag("tr>td", "value for distance".to_s, 2)
+    response.should have_tag("tr>td", "value for url".to_s, 2)
   end
 end

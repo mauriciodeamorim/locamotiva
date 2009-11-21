@@ -50,7 +50,7 @@ describe Admin::AthletesController do
       it "redirects to the created athlete" do
         Athlete.stub!(:new).and_return(mock_athlete(:save => true))
         post :create, :athlete => {}
-        response.should redirect_to(admin_athlete_url(mock_athlete))
+        response.should redirect_to(admin_athletes_url)
       end
     end
 

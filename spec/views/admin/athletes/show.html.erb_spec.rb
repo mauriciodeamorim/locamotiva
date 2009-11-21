@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/athletes/show.html.erb" do
+describe "admin/athletes/show.html.erb" do
   include AthletesHelper
   before(:each) do
     assigns[:athlete] = @athlete = stub_model(Athlete,
