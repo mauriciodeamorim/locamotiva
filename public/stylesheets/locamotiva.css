@@ -87,7 +87,12 @@ pre {
 
 
 /*Railscast about authologic*/
-div#user_nav { float: right; font-size: 0.9em; }
+div#user_nav { 
+  font-size: 0.9em;
+  float: right;
+  padding-right: 30px;
+}
+
 /*correct footer*/
 #footer {
     text-align: center;

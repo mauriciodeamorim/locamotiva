@@ -2,7 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :athletes
   map.resources :results
   map.resources :races, :only => :index
-
+  map.resources :users
+  
   map.root :controller => "results"
 
   map.connect 'admin/', :controller => 'admin/races'
