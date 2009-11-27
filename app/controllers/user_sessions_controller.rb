@@ -17,7 +17,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.find  
     @user_session.destroy  
     flash[:notice] = "Successfully logged out."  
-    redirect_to admin_athletes_url  
+    redirect_to athletes_url  
   end
 
 end
