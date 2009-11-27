@@ -1,6 +1,6 @@
 class Admin::AthletesController < ApplicationController
-  # GET /athletes
-  # GET /athletes.xml
+  before_filter :require_user, :except => [:index]
+  
   def index
     @athletes = Athlete.all
 
