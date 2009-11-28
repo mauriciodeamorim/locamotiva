@@ -1,4 +1,12 @@
 - Internacionalização
 - Imagem por usuário
 - Sistema para subir arquivos automaticamente
-- Melhoria dos testes
+- Teste de cucumber
+- Refatoracao nos specs
+- login e senha
+- sistema administrativo com autenticacao e autorizacao
+- paginacao
+- busca diversas
+- melhoria do layout
+- atualizacao da base com provas e resultados de 2009
+

@@ -25,6 +25,12 @@
 
 	<p style="color: green"><%= flash[:notice] %></p>
 
+	<div id="search" style="visibility:hidden;">
+	  <form action="/search" id="top_search_form" method="get">
+	      Busca <input name="q" type="search"> <input value="Search" type="submit">
+	  </form>
+	</div>
+	
 	<div id="footer">
 		<ul>
 				<li><%= link_to "Resultados", results_path %></li>
@@ -36,9 +42,3 @@
 	</div>
 </body>
 </html>
-
-<div id="search" style="visibility:hidden;">
-  <form action="/search" id="top_search_form" method="get">
-      Busca <input name="q" type="search"> <input value="Search" type="submit">
-  </form>
-</div>

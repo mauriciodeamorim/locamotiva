@@ -16,6 +16,7 @@ describe Admin::AthletesController do
 
   describe "GET show" do
     it "assigns the requested athlete as @athlete" do
+      controller.stub!(:require_user).and_return(true)      
       Athlete.stub!(:find).with("37").and_return(mock_athlete)
       get :show, :id => "37"
       assigns[:athlete].should equal(mock_athlete)
@@ -24,6 +25,7 @@ describe Admin::AthletesController do
 
   describe "GET new" do
     it "assigns a new athlete as @athlete" do
+      controller.stub!(:require_user).and_return(true)      
       Athlete.stub!(:new).and_return(mock_athlete)
       get :new
       assigns[:athlete].should equal(mock_athlete)
@@ -32,6 +34,7 @@ describe Admin::AthletesController do
 
   describe "GET edit" do
     it "assigns the requested athlete as @athlete" do
+      controller.stub!(:require_user).and_return(true)      
       Athlete.stub!(:find).with("37").and_return(mock_athlete)
       get :edit, :id => "37"
       assigns[:athlete].should equal(mock_athlete)
@@ -42,12 +45,14 @@ describe Admin::AthletesController do
 
     describe "with valid params" do
       it "assigns a newly created athlete as @athlete" do
+        controller.stub!(:require_user).and_return(true)      
         Athlete.stub!(:new).with({'these' => 'params'}).and_return(mock_athlete(:save => true))
         post :create, :athlete => {:these => 'params'}
         assigns[:athlete].should equal(mock_athlete)
       end
 
       it "redirects to the created athlete" do
+        controller.stub!(:require_user).and_return(true)
         Athlete.stub!(:new).and_return(mock_athlete(:save => true))
         post :create, :athlete => {}
         response.should redirect_to(admin_athletes_url)
@@ -56,12 +61,14 @@ describe Admin::AthletesController do
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved athlete as @athlete" do
+        controller.stub!(:require_user).and_return(true)      
         Athlete.stub!(:new).with({'these' => 'params'}).and_return(mock_athlete(:save => false))
         post :create, :athlete => {:these => 'params'}
         assigns[:athlete].should equal(mock_athlete)
       end
 
       it "re-renders the 'new' template" do
+        controller.stub!(:require_user).and_return(true)
         Athlete.stub!(:new).and_return(mock_athlete(:save => false))
         post :create, :athlete => {}
         response.should render_template('new')
@@ -74,18 +81,21 @@ describe Admin::AthletesController do
 
     describe "with valid params" do
       it "updates the requested athlete" do
+        controller.stub!(:require_user).and_return(true)      
         Athlete.should_receive(:find).with("37").and_return(mock_athlete)
         mock_athlete.should_receive(:update_attributes).with({'these' => 'params'})
         put :update, :id => "37", :athlete => {:these => 'params'}
       end
 
       it "assigns the requested athlete as @athlete" do
+        controller.stub!(:require_user).and_return(true)      
         Athlete.stub!(:find).and_return(mock_athlete(:update_attributes => true))
         put :update, :id => "1"
         assigns[:athlete].should equal(mock_athlete)
       end
 
       it "redirects to the athlete" do
+        controller.stub!(:require_user).and_return(true)
         Athlete.stub!(:find).and_return(mock_athlete(:update_attributes => true))
         put :update, :id => mock_athlete
         response.should redirect_to(admin_athlete_url)
@@ -94,18 +104,21 @@ describe Admin::AthletesController do
 
     describe "with invalid params" do
       it "updates the requested athlete" do
+        controller.stub!(:require_user).and_return(true)      
         Athlete.should_receive(:find).with("37").and_return(mock_athlete)
         mock_athlete.should_receive(:update_attributes).with({'these' => 'params'})
         put :update, :id => "37", :athlete => {:these => 'params'}
       end
 
       it "assigns the athlete as @athlete" do
+        controller.stub!(:require_user).and_return(true)      
         Athlete.stub!(:find).and_return(mock_athlete(:update_attributes => false))
         put :update, :id => "1"
         assigns[:athlete].should equal(mock_athlete)
       end
 
       it "re-renders the 'edit' template" do
+        controller.stub!(:require_user).and_return(true)        
         Athlete.stub!(:find).and_return(mock_athlete(:update_attributes => false))
         put :update, :id => "1"
         response.should render_template('edit')
@@ -116,12 +129,14 @@ describe Admin::AthletesController do
 
   describe "DELETE destroy" do
     it "destroys the requested athlete" do
+      controller.stub!(:require_user).and_return(true)      
       Athlete.should_receive(:find).with("37").and_return(mock_athlete)
       mock_athlete.should_receive(:destroy)
       delete :destroy, :id => "37"
     end
 
     it "redirects to the athletes list" do
+      controller.stub!(:require_user).and_return(true)      
       Athlete.stub!(:find).and_return(mock_athlete(:destroy => true))
       delete :destroy, :id => "1"
       response.should redirect_to(admin_athletes_url)
