@@ -2,7 +2,7 @@
 <%= form.error_messages %>  
 <ol class="formList">  
   <li>  
-    <%= form.label :username, "Username" %>  
+    <%= form.label :username, "Nome" %>  
     <%= form.text_field :username %>  
   </li>  
   <li>  
@@ -10,15 +10,15 @@
     <%= form.text_field :email %>  
   </li>  
   <li>  
-    <%= form.label :password, "Password" %>  
+    <%= form.label :password, "Senha" %>  
     <%= form.password_field :password %>  
   </li>  
   <li>  
-    <%= form.label :password_confirmation, "Password confirmation" %>  
+    <%= form.label :password_confirmation, "Confirmação da senha" %>  
     <%= form.password_field :password_confirmation %>  
   </li>  
   <li>  
-    <%= form.submit "Submit" %>  
+    <%= form.submit "Enviar" %>  
   </li>  
 </ol>  
 <% end %>

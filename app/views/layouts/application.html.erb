@@ -10,23 +10,13 @@
   <div id="menu">
 		<ul>
 				<li></li>
-				<li><%= link_to "Home", results_path %></li>
+				<li><%= link_to "Resultados", results_path %></li>
 		    <li>|</li>
 				<li><%= link_to "Provas", races_path %></li>
 		    <li>|</li>
 				<li><%= link_to "Atletas", athletes_path %></li>
 		</ul>
   </div>
-	<div id="user_nav">  
-	  <% if current_user %>  
-	    <%= link_to "Edit profile", edit_user_path(:current) %>  
-	    <%= link_to "Logout", logout_path %>  
-	  <% else %>  
-	    <%= link_to "Register", new_user_path %>  
-	    <%= link_to "Log in", login_path %>  
-	  <% end %>  
-	</div>
-
 	<div id="logo"><%= link_to "Locamotiva", races_path %></div>		
 
 	<div id="content" class="internal">
@@ -37,7 +27,7 @@
 
 	<div id="footer">
 		<ul>
-				<li><%= link_to "Home", results_path %></li>
+				<li><%= link_to "Resultados", results_path %></li>
 		    <li> | </li>
 				<li><%= link_to "Provas", races_path %></li>
 		    <li> | </li>
