@@ -1,6 +1,6 @@
 class RacesController < ApplicationController
 
   def index
-    @races = Race.all
+    @races = Race.find(:all, :order => 'date DESC')
   end
 end

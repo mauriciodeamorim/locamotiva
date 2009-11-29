@@ -1,73 +1,31 @@
-<p>
-  <b>Start number:</b>
-  <%=h @result.start_number %>
-</p>
+<div>
+	<div class="dateBox">
+		<div class="date">
+	    <div class="bigDate"><%= @race.date.strftime('%d') %></div>
+	    <div class="bigDate"><%= @race.date.strftime('%b') %></div>
+		</div>
+		<div class="countdown"> </div>
+	</div>
+  <div class="race_title"><%= @race.name %></div>
+  <div class="race_title black"><%= @race.distance %></div>
+</div>
 
-<p>
-  <b>Category:</b>
-  <%=h @result.category %>
-</p>
+<table class="race">
+  <tr class="race_black">
+    <td>Número</td>
+    <td>Atleta</td>
+    <td>Tempo oficial</td>
+    <td>Tempo líquido</td>
+    <td>Classificação</td>
+  </tr>
 
-<p>
-  <b>Team:</b>
-  <%=h @result.team %>
-</p>
-
-<p>
-  <b>Liquid time:</b>
-  <%=h @result.liquid_time %>
-</p>
-
-<p>
-  <b>Official time:</b>
-  <%=h @result.official_time %>
-</p>
-
-<p>
-  <b>Class general:</b>
-  <%=h @result.class_general %>
-</p>
-
-<p>
-  <b>Class sex:</b>
-  <%=h @result.class_sex %>
-</p>
-
-<p>
-  <b>Class category:</b>
-  <%=h @result.class_category %>
-</p>
-
-<p>
-  <b>Pace:</b>
-  <%=h @result.pace %>
-</p>
-
-<p>
-  <b>Distance:</b>
-  <%=h @result.distance %>
-</p>
-
-<p>
-  <b>Substitute:</b>
-  <%=h @result.substitute %>
-</p>
-
-<p>
-  <b>Notes:</b>
-  <%=h @result.notes %>
-</p>
-
-<p>
-  <b>Race:</b>
-  <%=h @result.race_id %>
-</p>
-
-<p>
-  <b>Runner:</b>
-  <%=h @result.athlete_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_result_path(@result) %> |
-<%= link_to 'Back', results_path %>
+<% for result in @results %>
+  <tr>
+    <td><%=h result.start_number %></td>
+    <td><%=h result.athlete.name %></td>
+    <td><%=h result.official_time.strftime("%H:%M:%S") %></td>
+    <td><%=h result.liquid_time.strftime("%H:%M:%S")%></td>
+    <td><%=h result.class_general %></td>
+  </tr>
+<% end %>
+</table>

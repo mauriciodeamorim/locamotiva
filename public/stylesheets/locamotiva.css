@@ -61,7 +61,7 @@ pre {
 
 .internal {
 	padding-left:20px;
-	padding-top:50px;
+	padding-top:25px;
 	clear:both;
 	background-color: #FFF;
 	min-height: 600px;
@@ -120,21 +120,38 @@ div#user_nav {
   border-color: blue;
 }
 
-.prova, td {
+.race, td {
   color: gray;
   font-size: 20px;
   padding: 5px;
   clear: both;
 }
 
+.race_black td {
+	color: black;
+}
+
 .race_title {
   color:#EA5D0F;
-  font-size: 20px;
   font-weight:normal;
-  font-size:200%;
+  font-size:220%;
   float:left;
   padding-top:20px;
   margin:2px 0 15px;
+}
+.race_title a {
+  color:#EA5D0F;
+  text-decoration: none;
+}
+
+.race_title a:visited {
+  color:#EA5D0F;
+  text-decoration: none;	
+}
+
+.race_title a:hover {
+  color:#EA5D0F;
+  text-decoration: none;	
 }
 
 .black {
@@ -226,6 +243,14 @@ form {
 
 h1 {
     color:#EA5D0F;
+    font-size:200%;
+    font-weight:normal;
+    margin:2px 0 18px;
+    padding:0;
+}
+
+h5 {
+    color:#000000;
     font-size:200%;
     font-weight:normal;
     margin:2px 0 18px;

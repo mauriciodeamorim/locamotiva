@@ -6,7 +6,7 @@
 		</div>
 		<div class="countdown"> </div>
 	</div>
-	<h1 id='race_name_front'><%= link_to race.name, result_path(race.id) %></h1>
-  <h1 id='race_distance_front'><%=h race.distance %></h1>
+	<div class='race_title'><%= link_to race.name, result_path(race.id) %></div>
+  <div class='race_title black'><%=h race.distance %></div>
 	<div style="clear:left"></div>
 <% end %>
