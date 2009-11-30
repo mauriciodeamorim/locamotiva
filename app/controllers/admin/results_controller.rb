@@ -45,7 +45,7 @@ class Admin::ResultsController < ApplicationController
     respond_to do |format|
       if @result.save
         flash[:notice] = 'Result was successfully created.'
-        format.html { redirect_to(@result) }
+        format.html { redirect_to(admin_result_url(@result)) }
         format.xml  { render :xml => @result, :status => :created, :location => @result }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class Admin::ResultsController < ApplicationController
     respond_to do |format|
       if @result.update_attributes(params[:result])
         flash[:notice] = 'Result was successfully updated.'
-        format.html { redirect_to(@result) }
+        format.html { redirect_to(admin_result_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class Admin::ResultsController < ApplicationController
     @result.destroy
 
     respond_to do |format|
-      format.html { redirect_to(results_url) }
+      format.html { redirect_to(admin_results_url) }
       format.xml  { head :ok }
     end
   end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/results/edit.html.erb" do
+describe "admin/results/edit.html.erb" do
   include ResultsHelper
 
   before(:each) do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "/results/show.html.erb" do
+describe "admin/results/show.html.erb" do
   include ResultsHelper
   before(:each) do
     assigns[:result] = @result = stub_model(Result,

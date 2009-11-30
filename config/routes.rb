@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
    admin.resources :races
    admin.resources :athletes
+   admin.resources :results
   end
 
   map.login 'login', :controller => 'user_sessions', :action => 'new'  
