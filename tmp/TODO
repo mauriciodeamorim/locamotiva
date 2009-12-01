@@ -5,8 +5,10 @@
 - Refatoracao nos specs
 - login e senha
 - sistema administrativo com autenticacao e autorizacao
-- paginacao
+- personalizar paginacao
+- paginacao com Ajax
 - busca diversas
 - melhoria do layout
 - atualizacao da base com provas e resultados de 2009
+- corrigir cor dos links após clicado para manter a cor inicial
 

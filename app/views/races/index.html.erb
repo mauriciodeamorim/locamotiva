@@ -10,3 +10,6 @@
   <div class='race_title black'><%=h race.distance %></div>
 	<div style="clear:left"></div>
 <% end %>
+<div class="pagination">
+  <%= will_paginate @races, :prev_label => "Anterior", :next_label => "Próximo" %>
+</div>
