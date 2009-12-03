@@ -1,15 +1,18 @@
 <% for race in @races %>
-	<div class="dateBox">
-		<div class="date">
-	    <div class="bigDate"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
-	    <div class="bigDate"><% if race.date %><%= race.date.strftime('%b') %><% end %></div>
+	<div style="text-align:center; width:900px; margin:0 auto">
+		<div class="dateBox">
+			<div class="date">
+		    <div class="bigDate"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
+		    <div class="bigDate"><% if race.date %><%= race.date.strftime('%b') %><% end %></div>
+			</div>
+			<div class="countdown"> </div>
 		</div>
-		<div class="countdown"> </div>
-	</div>
-	<div class='race_title'><%= link_to race.name, result_path(race.id) %></div>
-  <div class='race_title black'><%=h race.distance %></div>
-	<div style="clear:left"></div>
+		<div class='race_title'><%= link_to race.name, result_path(race.id) %></div>
+	  <div class='race_title black'><%=h race.distance %></div>
+		<div style="clear:left"></div>
+	</div>	
 <% end %>
+
 <div class="pagination">
   <%= will_paginate @races, :prev_label => "Anterior", :next_label => "Próximo" %>
 </div>
