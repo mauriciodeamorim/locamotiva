@@ -1,10 +1,27 @@
+html, body { height:100%; }
 body { background-color: #fff; color: #333; margin: 0; padding: 0; }
+body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-size:13px; line-height: 22px; }
+#container { 	min-height: 100%; position: relative;	}
+* html #tudo { height: 100%; /* hack para IE6 que trata height como min-height */	}
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 22px;
-}
+#content { padding-bottom: 30px; }
+#search_form { visibility:hidden; }
+#footer { position: absolute;	bottom: 0; text-align: center; min-height:65px;/*    _height: 80%;*/ background-color: #000; width: 100%; padding-top: 10px; }
+
+.footer, ul { font-size: 1.0em; }
+.footer, ul, li { display: inline; /*color: #FFAA06;*/ }
+
+#pagination {  }
+  #pagination a { display: block; width: 34px; height: 16px; color: #000000; text-decoration: none; padding: 6px 15px; text-align: center; }
+    #pagination a.newer { float: left; }
+    #pagination a.older { float: right; }
+.pagination {  background: white; font-size:18px; text-align:center; width:800px; margin:0 auto; padding-top:20px; }
+  .pagination a, .pagination span { padding: .2em .5em; display: block; float: left; margin-right: 1px; }
+  .pagination span.disabled { color: #FFF; border: 1px solid #FFF; }
+  .pagination span.current { font-weight: bold; background: #000; color: #FFF; border: 1px solid #000; }
+  .pagination a { text-decoration: none; background: #FFAA06; color: #000; border: 1px solid #FFAA06; }
+    .pagination a:hover, .pagination a:focus { color: #FFF; border-color: #000; }
+
 #menu {
   text-align: center;
   position: relative;
@@ -54,9 +71,9 @@ body, p, ol, ul, td {
 }
 
 pre {
-    background-color: #eee;
-    padding: 10px;
-    font-size: 11px;
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
 }
 
 .internal {
@@ -67,50 +84,15 @@ pre {
 	min-height: 600px;
 }
 .header {
-    font-size: 50px;
-    padding: 20px;
-    float: left;
+  font-size: 50px;
+  padding: 20px;
+  float: left;
 }
-/*new footer test*/
-/* footer */
-/*#footer { background:#201e1c url(images/rodape.jpg) repeat-x top; height:200px; border-top:1px solid #b8b2ac; clear:both; }*/
-/*#footer #footerBox { width:964px; text-align:right;  color:#fff; padding-top:60px; padding-right:10px; font-size:9px; font-family:Arial, Helvetica, sans-serif; margin:0 auto; }*/
-/*#footer #footerBox a { text-decoration:none; }*/
-/*#footer #footerBox a:hover { text-decoration:underline; }*/
-/*#footer #footerBox #footerText { text-transform:uppercase; }*/
-/*#footer #footerBox #footerText a { color:#FFFFFF; }*/
-/*#footer #footerBox #footerText a:hover { color:#990100; text-decoration:underline; }*/
-
-/*.footerWeb { color:#7b746b; border-right:2px dotted #7b746b; padding:0px 12px 2px; margin-top:15px; }*/
-/*.footerAddress { color:#7b746b; width:100px; padding:0px; margin-top:15px;  }*/
-/*.footerMiniText { padding-top:20px; }*/
-
-
 /*Railscast about authologic*/
 div#user_nav { 
   font-size: 0.9em;
   float: right;
   padding-right: 30px;
-}
-
-/*correct footer*/
-#footer {
-    text-align: center;
-    position: relative;
-    min-height: 90px;
-    _height: 80%;
-    background-color: #000;    
-    width: 100%;
-    padding-top: 20px;
-}
-
-.footer, ul {
-    font-size: 1.0em;
-}
-
-.footer, ul, li {
-    display: inline;
-/*    color: #FFAA06;*/
 }
 
 .data {
@@ -201,7 +183,7 @@ a:hover { color: #fff; background-color:#000; }
 
 /*new class for date*/
 
-.dateBox {
+.date_box {
     float:left;
     font-size:11px;
     font-weight:bold;
@@ -209,16 +191,16 @@ a:hover { color: #fff; background-color:#000; }
     text-align:center;
     width:77px;
 }
-.dateBox .date {
+.date_box .date {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
-    background:transparent url(../images/datebox-black-bg.png) no-repeat scroll left top;
+    background:transparent url(../images/date_box-black-bg.png) no-repeat scroll left top;
     color:white;
     margin:0;
     padding:10px 0;
 }
-.dateBox .date .bigDate {
+.date_box .date .big_date {
 /*    color:#FFDD41;*/
 /*    color:#FFAA06;*/
     color:#FFF;
@@ -227,11 +209,11 @@ a:hover { color: #fff; background-color:#000; }
     margin:0;
     padding:0;
 }
-.dateBox .countdown {
+.date_box .countdown {
     -moz-background-clip:border;
     -moz-background-inline-policy:continuous;
     -moz-background-origin:padding;
-    background:transparent url(../images/datebox-orange-bg.png) no-repeat scroll left bottom;
+    background:transparent url(../images/date_box-orange-bg.png) no-repeat scroll left bottom;
     color:white;
     padding:4px 0 8px;
 }

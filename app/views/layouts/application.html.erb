@@ -5,40 +5,38 @@
   <title>Locamotiva</title>  
   <%= stylesheet_link_tag 'locamotiva', 'race' %>
 </head>
-
 <body>
-  <div id="menu">
-		<ul>
-				<li></li>
-				<li><%= link_to "Resultados", results_path %></li>
-		    <li>|</li>
-				<li><%= link_to "Provas", races_path %></li>
-		    <li>|</li>
-				<li><%= link_to "Atletas", athletes_path %></li>
-		</ul>
-  </div>
-	<div id="logo"><%= link_to "Locamotiva", races_path %></div>		
+	<div id="container">
+	  <div id="menu">
+			<ul>
+					<li></li>
+					<li><%= link_to "Resultados", results_path %></li>
+			    <li>|</li>
+					<li><%= link_to "Provas", races_path %></li>
+			    <li>|</li>
+					<li><%= link_to "Atletas", athletes_path %></li>
+			</ul>
+	  </div>
+		<div id="logo"><%= link_to "Locamotiva", races_path %></div>		
 
-	<div id="content" class="internal">
-		<%= yield  %>
-	</div>
-
-	<p style="color: green"><%= flash[:notice] %></p>
-
-	<div id="search" style="visibility:hidden;">
-	  <form action="/search" id="top_search_form" method="get">
-	      Busca <input name="q" type="search"> <input value="Search" type="submit">
-	  </form>
-	</div>
-	
-	<div id="footer">
-		<ul>
-				<li><%= link_to "Resultados", results_path %></li>
-		    <li> | </li>
-				<li><%= link_to "Provas", races_path %></li>
-		    <li> | </li>
-				<li><%= link_to "Atletas", athletes_path %></li>
-		</ul>
+		<div id="content" class="internal">
+			<%= yield  %>
+			<p style="color: green"><%= flash[:notice] %></p>			
+		  <form action="/search" id="search_form" method="get">
+		      Busca <input name="q" type="search"> <input value="Search" type="submit">
+		  </form>
+		</div>
+		<div id="footer">
+			<ul>
+					<li><%= link_to "Resultados", results_path %></li>
+			    <li> | </li>
+					<li><%= link_to "Provas", races_path %></li>
+			    <li> | </li>
+					<li><%= link_to "Atletas", athletes_path %></li>
+					<li> | </li>
+					<li><%= link_to "Projeto", races_path %></li>
+			</ul>
+		</div>
 	</div>
 </body>
 </html>

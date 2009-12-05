@@ -1,12 +1,18 @@
 #race_name_front {
-    float:left;
-    padding-top:20px;
-    text-decoration: none;
+  float:left;
+  padding-top:20px;
+  text-decoration: none;
 }
 
 #race_distance_front {
-    float:left;
-    padding-top:20px;
-    padding-left:20px; 
-    color:black;
+  float:left;
+  padding-top:20px;
+  padding-left:20px; 
+  color:black;
+}
+
+.race_central {
+	text-align:center; 
+	width:900px;
+	margin:0 auto;
 }
