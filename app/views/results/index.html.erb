@@ -1,32 +1,35 @@
-<h5>Últimos resultados</h5>
-<div>
-	<div class="date_box">
-		<div class="date">
-	    <div class="big_date"><%= @last_race.date.strftime('%d') %></div>
-	    <div class="big_date"><%= @last_race.date.strftime('%b') %></div>
-		</div>
-		<div class="countdown"> </div>
-	</div>
-  <div class="race_title"><%= @last_race.name %></div>
-  <div class="race_title black"><%= @last_race.distance %></div>
+<div class="centralize">
+    <h5 class="align_left">Últimos resultados</h5>
+    <div>
+	    <div class="date_box">
+		    <div class="date">
+	        <div class="big_date"><%= @last_race.date.strftime('%d') %></div>
+	        <div class="big_date"><%= @last_race.date.strftime('%b') %></div>
+		    </div>
+		    <div class="countdown"> </div>
+	    </div>
+      <div class="race_title"><%= @last_race.name %></div>
+      <div class="race_title black"><%= @last_race.distance %></div>
+    </div>
+
+    <table class="race">
+      <tr class="race_black">
+        <td>Número</td>
+        <td>Atleta</td>
+        <td>Tempo oficial</td>
+        <td>Tempo líquido</td>
+        <td>Classificação</td>
+      </tr>
+
+    <% for result in @results %>
+      <tr>
+        <td><%=h result.start_number %></td>
+        <td><%=h result.athlete.name %></td>
+        <td><%=h result.official_time.strftime("%H:%M:%S") %></td>
+        <td><%=h result.liquid_time.strftime("%H:%M:%S")%></td>
+        <td><%=h result.class_general %></td>
+      </tr>
+    <% end %>
+    </table>
 </div>
 
-<table class="race">
-  <tr class="race_black">
-    <td>Número</td>
-    <td>Atleta</td>
-    <td>Tempo oficial</td>
-    <td>Tempo líquido</td>
-    <td>Classificação</td>
-  </tr>
-
-<% for result in @results %>
-  <tr>
-    <td><%=h result.start_number %></td>
-    <td><%=h result.athlete.name %></td>
-    <td><%=h result.official_time.strftime("%H:%M:%S") %></td>
-    <td><%=h result.liquid_time.strftime("%H:%M:%S")%></td>
-    <td><%=h result.class_general %></td>
-  </tr>
-<% end %>
-</table>

@@ -1,5 +1,5 @@
 <% for race in @races %>
-	<div class="race_central">
+	<div class="centralize">
 		<div class="date_box">
 			<div class="date">
 		    <div class="big_date"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
@@ -10,6 +10,7 @@
 		<div class='race_title'><%= link_to race.name, result_path(race.id) %></div>
 	  <div class='race_title black'><%=h race.distance %></div>
 		<div style="clear:left"></div>
-	</div>	
+	</div>
 <% end %>
 <%= will_paginate @races, :prev_label => "Anterior", :next_label => "Próximo" %>
+
