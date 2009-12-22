@@ -24,67 +24,20 @@ body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-s
   .pagination a { text-decoration: none; background: #FFAA06; color: #000; border: 1px solid #FFAA06; }
     .pagination a:hover, .pagination a:focus { color: #FFF; border-color: #000; }
 
+#menu { text-align: center; position: relative; min-height: 100%; _height: 100%; width: 100%; padding-bottom: -40px; font-size: 2.2em; padding: 0;  background-color: #000;}
+  #menu ul { font-size: 1.2em; margin: 0 auto; text-align: center;}
+    #menu ul li { display: inline; line-height: 2.0em; padding: 0 10px 0 0;}
+      #menu ul li a { color: #fff; text-decoration: none; padding: 5px 10px;}
+      #menu ul li a:hover {/*  color: #FFF000;#FFF6BF;#4B4B4B*/ color: #000; background-color: #FFAA06;}
 
+#logo { position: absolute; margin: 0; top:25px; padding:0 0 0 25px; font-size:40px;}
+  #logo a { text-decoration: none;}
+  #logo a:visited { color: #FF8C00;}
 
-#menu {
-  text-align: center;
-  position: relative;
-  min-height: 100%;
-  _height: 100%;
-  width: 100%;
-  padding-bottom: -40px;
-  font-size: 2.2em;
-  padding: 0;
-  background-color: #000;
-}
-#menu ul {
-  font-size: 1.2em;
-  margin: 0 auto;
-  text-align: center;
-}
-#menu ul li {
-  display: inline;
-  line-height: 2.0em;
-  padding: 0 10px 0 0;
-}
-#menu ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-#menu ul li a:hover {
-/*  color: #FFF000;#FFF6BF;#4B4B4B*/
-  color: #000;
-  background-color: #FFAA06;
-}
+pre { background-color: #eee; padding: 10px; font-size: 11px;}
 
-#logo {
-  position: absolute;
-  margin: 0;
-  top:25px;
-  padding:0 0 0 25px;
-  font-size:40px;
-}
+.header { font-size: 50px;  padding: 20px; float: left;}
 
-#logo a {
-   text-decoration: none;   
-}
-
-#logo a:visited {
-    color: #FFAA06;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-.header {
-  font-size: 50px;
-  padding: 20px;
-  float: left;
-}
 /*Railscast about authologic*/
 div#user_nav { 
   font-size: 0.9em;
@@ -139,7 +92,7 @@ div#user_nav {
 }
 
 a { color: #000; }
-a:visited { color: #555; }
+a:visited { color: #FF6600; }
 a:hover { color: #fff; background-color:#000; }
 
 .fieldWithErrors {
@@ -288,9 +241,6 @@ h4 {
     font-weight:bold;
 }
 
-a {
-    color:#FF6600;
-}
-/*a img {
-border:medium none;
-}*/
+a { color:#FF6600;}
+
+p.about { font-size:16px; margin: 20px 100px 0 100px;}
