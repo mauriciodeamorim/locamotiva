@@ -1,4 +1,5 @@
 class Admin::ResultsController < ApplicationController
+  before_filter :require_user  
   # GET /results
   # GET /results.xml
   def index

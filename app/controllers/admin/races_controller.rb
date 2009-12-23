@@ -1,4 +1,5 @@
 class Admin::RacesController < ApplicationController
+  before_filter :require_user
   # GET /races
   # GET /races.xml
   def index
