@@ -1,17 +1,15 @@
 <% form_for @user_session do |form| %>  
 <%= form.error_messages %>
-<div class="formList">
-	<div>
-		<span><%= form.label :username, "Nome" %></span>
-    <span><%= form.text_field :username %></span>
-	</div>
-	<div>
-		<span><%= form.label :password, "Senha" %></span>
-    <span><%= form.text_field :password %></span>
-	</div>	
-  <div>  
+<div class="login">
+  <p>
+    <%= form.label :username, "Nome" %><span><%= form.text_field :username %></span>
+  </p>
+  <p>
+  <%= form.label :password, "Senha" %><span><%= form.text_field :password %></span>
+  </p>
+  <p>  
     <%= form.submit "Enviar" %>  
-  </div>
+  </p>
 </div>
 <% end %>
 

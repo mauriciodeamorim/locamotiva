@@ -24,17 +24,17 @@ body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-s
   .pagination span.current { font-weight: bold; background: #000; color: #FFF; border: 1px solid #000; }
   .pagination a { text-decoration: none; background: #FFAA06; color: #000; border: 1px solid #FFAA06; }
     .pagination a:hover, .pagination a:focus { color: #FFF; border-color: #000; }
-
+ 
 #menu { text-align: center; position: relative; min-height: 100%; _height: 100%; width: 100%; padding-bottom: -40px; font-size: 2.2em; padding: 0;  background-color: #000;}
   #menu ul { font-size: 1.2em; margin: 0 auto; text-align: center;}
     #menu ul li { display: inline; line-height: 2.0em; padding: 0 10px 0 0;}
       #menu ul li a { color: #fff; text-decoration: none; padding: 5px 10px;}
       #menu ul li a:hover {/*  color: #FFF000;#FFF6BF;#4B4B4B*/ color: #000; background-color: #FFAA06;}
-
-#logo { position: absolute; margin: 0; top:25px; padding:0 0 0 25px; font-size:40px;}
-  #logo a { text-decoration: none;}
-  #logo a:visited { color: #FF8C00;}
-
+      #menu ul li div { position: absolute; margin: 0; top:0px; padding:0 0 0 25px; font-size:40px;}
+      #menu ul li div a { text-decoration: none; background-color: #000;}
+      #menu ul li div a:visited { color: #FF8C00;}
+      #menu ul li div a:hover {color: #FF8C00; background-color: #000;}
+            
 .race, td { color: gray; font-size: 20px; padding: 5px; clear: both;}
 .race_black td { color: black;}
 .race_title { color:#EA5D0F; font-weight:normal; font-size:180%; float:left; padding-top:20px; margin:2px 0 15px;}
@@ -69,25 +69,16 @@ div#user_nav { font-size: 0.9em; float: right; padding-right: 30px;}
     .date_box .date .big_date { color:#FFF; display:block; font-size:22px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
     .date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
                           background:transparent url(../images/date_box-orange-bg.png) no-repeat scroll left bottom; color:white; padding:4px 0 8px;}
-
-form { margin:0; padding:0;}
+/*form { margin:0; padding:0;}*/
 
 h1 { color:#EA5D0F; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
-
-h5 { color:#000000; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
-h2 { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
-    background:transparent url(../images/separator-middlebar.png) repeat-x scroll left bottom; clear:both; color:#999999;
-    font-family:"Arial Narrow","News Gothic",Helvetica,sans-serif; font-size:130%; font-weight:normal; margin:40px 0 0; padding:0 0 17px;}
-    h2 a { color:#999999; text-decoration:none;}
-    h2 a:hover { text-decoration:underline;}
-    h2.panel { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
-    background:transparent url(../images/separator-middlebar.png) repeat-x scroll left bottom; color:#FFA200; font-size:90%;
-    font-weight:normal; letter-spacing:0.1em; margin:40px 0 0; padding:0 0 20px 10px;}
 h3 { font-size:110%; font-weight:bold; margin:20px 0 0; padding:0;}
 h4 { font-size:100%; font-weight:bold;}
+h5 { color:#000000; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
 
 p.about { font-size:16px; margin: 20px 100px 0 100px;}  
-  p.about a { text-decoration:none;}
+  p.about a { text-decoration:none; color:#EA5D0F;}
+  p.about a:visited { color:#EA5D0F;}
   p.italic { font-style: italic;}  
     
 .notice { font-size: 20px; color:green;}

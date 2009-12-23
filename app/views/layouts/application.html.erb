@@ -3,12 +3,13 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Locamotiva</title>  
-  <%= stylesheet_link_tag 'locamotiva', 'race' %>
+  <%= stylesheet_link_tag 'locamotiva', 'race', 'admin' %>
 </head>
 <body>
 	<div id="container">
 	  <div id="menu">
 			<ul>
+					<li><div><%= link_to "Locamotiva", races_path %></div></li>
 					<li></li>
 					<li><%= link_to "Resultados", results_path %></li>
 			    <li>|</li>
@@ -17,7 +18,6 @@
 					<li><%= link_to "Projeto", '/about' %></li>
 			</ul>
 	  </div>
-		<div id="logo"><%= link_to "Locamotiva", races_path %></div>		
 
 		<div id="content" class="internal">
 			<div class="notice"><%= flash[:notice] %></div>
