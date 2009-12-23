@@ -18,7 +18,7 @@ body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-s
   #pagination a { display: block; width: 34px; height: 16px; color: #000000; text-decoration: none; padding: 6px 15px; text-align: center; }
     #pagination a.newer { float: left; }
     #pagination a.older { float: right; }
-.pagination {  background: white; font-size:18px; text-align:center; width:800px; margin:0 auto; padding-top:20px; }
+.pagination {  background: white; font-size:18px; text-align:center; width:800px; margin:10px auto;}
   .pagination a, .pagination span { padding: .2em .5em; display: block; float: left; margin-right: 1px; }
   .pagination span.disabled { color: #FFF; border: 1px solid #FFF; }
   .pagination span.current { font-weight: bold; background: #000; color: #FFF; border: 1px solid #000; }

@@ -1,16 +1,17 @@
-<% for race in @races %>
-	<div class="centralize">
-		<div class="date_box">
-			<div class="date">
-		    <div class="big_date"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
-		    <div class="big_date"><% if race.date %><%= race.date.strftime('%b') %><% end %></div>
-			</div>
-			<div class="countdown"> </div>
-		</div>
-		<div class='race_title'><%= link_to race.name, result_path(race.id) %></div>
-	  <div class='race_title black'><%=h race.distance %></div>
-		<div style="clear:left"></div>
-	</div>
-<% end %>
-<%= will_paginate @races, :prev_label => "Anterior", :next_label => "Próximo" %>
+<div class="centralize">
+  <h5 class="align_left">Todas as provas</h5>
+  <% for race in @races %>
+	  <div class="date_box">
+		  <div class="date">
+	      <div class="big_date"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
+	      <div class="big_date"><% if race.date %><%= race.date.strftime('%b') %><% end %></div>
+		  </div>
+		  <div class="countdown"> </div>
+	  </div>
+	  <div class='race_title'><%= link_to race.name, result_path(race.id) %></div>
+    <div class='race_title black'><%=h race.distance %></div>
+	  <div style="clear:left"></div>
+  <% end %>
+</div>
+ <%= will_paginate @races, :prev_label => "Anterior", :next_label => "Próximo" %>
 
