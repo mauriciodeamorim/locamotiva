@@ -10,6 +10,7 @@ body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-s
 #search_form { visibility:hidden; }
 
 #footer { position: absolute;	bottom: 0; text-align: center; min-height:65px; background-color: #000; width: 100%; padding-top: 10px; }
+  #footer a:visited{ color: #FF6600;}
 .footer, ul { font-size: 1.0em; }
   .footer, ul, li { display: inline; /*color: #FFAA06;*/ }
 
@@ -34,213 +35,59 @@ body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-s
   #logo a { text-decoration: none;}
   #logo a:visited { color: #FF8C00;}
 
+.race, td { color: gray; font-size: 20px; padding: 5px; clear: both;}
+.race_black td { color: black;}
+.race_title { color:#EA5D0F; font-weight:normal; font-size:180%; float:left; padding-top:20px; margin:2px 0 15px;}
+  .race_title a { color:#EA5D0F; text-decoration: none;}
+  .race_title a:visited { color:#EA5D0F; text-decoration: none;}
+  .race_title a:hover {  color:#EA5D0F; text-decoration: none;}
+
+a { color: #000; }
+a:visited { color: #000; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors { padding: 2px; background-color: red; display: table;}
+
+#errorExplanation { width: 400px; border: 2px solid red; padding: 7px; padding-bottom: 12px; margin-bottom: 20px; background-color: #f0f0f0;}
+  #errorExplanation h2 { text-align: left; font-weight: bold; padding: 5px 5px 5px 15px; font-size: 12px; margin: -7px; background-color: #c00; color: #fff;}
+  #errorExplanation p { color: #333; margin-bottom: 0; padding: 5px;}
+  #errorExplanation ul li { font-size: 12px; list-style: square;}
+
 pre { background-color: #eee; padding: 10px; font-size: 11px;}
 
 .header { font-size: 50px;  padding: 20px; float: left;}
 
+.black { color:black; padding-left: 20px;}
+
 /*Railscast about authologic*/
-div#user_nav { 
-  font-size: 0.9em;
-  float: right;
-  padding-right: 30px;
-}
-
-.data {
-  font-size: 20px;
-  padding: 5px;
-  border: solid;
-  border-color: blue;
-}
-
-.race, td {
-  color: gray;
-  font-size: 20px;
-  padding: 5px;
-  clear: both;
-}
-
-.race_black td {
-	color: black;
-}
-
-.race_title {
-  color:#EA5D0F;
-  font-weight:normal;
-  font-size:180%;
-  float:left;
-  padding-top:20px;
-  margin:2px 0 15px;
-}
-.race_title a {
-  color:#EA5D0F;
-  text-decoration: none;
-}
-
-.race_title a:visited {
-  color:#EA5D0F;
-  text-decoration: none;	
-}
-
-.race_title a:hover {
-  color:#EA5D0F;
-  text-decoration: none;	
-}
-
-.black {
-    color:black;
-    padding-left: 20px;
-}
-
-a { color: #000; }
-a:visited { color: #FF6600; }
-a:hover { color: #fff; background-color:#000; }
-
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
+div#user_nav { font-size: 0.9em; float: right; padding-right: 30px;}
 
 /*new class for date*/
+.date_box { float:left; font-size:11px; font-weight:bold;  margin:0 12px 15px 0; text-align:center; width:77px;}
+    .date_box .date { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
+                     background:transparent url(../images/date_box-black-bg.png) no-repeat scroll left top; color:white; margin:0; padding:10px 0;}
+    .date_box .date .big_date { color:#FFF; display:block; font-size:22px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
+    .date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
+                          background:transparent url(../images/date_box-orange-bg.png) no-repeat scroll left bottom; color:white; padding:4px 0 8px;}
 
-.date_box {
-    float:left;
-    font-size:11px;
-    font-weight:bold;
-    margin:0 12px 15px 0;
-    text-align:center;
-    width:77px;
-}
-.date_box .date {
-    -moz-background-clip:border;
-    -moz-background-inline-policy:continuous;
-    -moz-background-origin:padding;
-    background:transparent url(../images/date_box-black-bg.png) no-repeat scroll left top;
-    color:white;
-    margin:0;
-    padding:10px 0;
-}
-.date_box .date .big_date {
-/*    color:#FFDD41;*/
-/*    color:#FFAA06;*/
-    color:#FFF;
-    display:block;
-    font-size:22px;
-    margin:0;
-    padding:0;
-}
-.date_box .countdown {
-    -moz-background-clip:border;
-    -moz-background-inline-policy:continuous;
-    -moz-background-origin:padding;
-    background:transparent url(../images/date_box-orange-bg.png) no-repeat scroll left bottom;
-    color:white;
-    padding:4px 0 8px;
-}
+form { margin:0; padding:0;}
 
-form {
-    margin:0;
-    padding:0;
-}
+h1 { color:#EA5D0F; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
 
-h1 {
-    color:#EA5D0F;
-    font-size:200%;
-    font-weight:normal;
-    margin:2px 0 18px;
-    padding:0;
-}
+h5 { color:#000000; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
+h2 { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
+    background:transparent url(../images/separator-middlebar.png) repeat-x scroll left bottom; clear:both; color:#999999;
+    font-family:"Arial Narrow","News Gothic",Helvetica,sans-serif; font-size:130%; font-weight:normal; margin:40px 0 0; padding:0 0 17px;}
+    h2 a { color:#999999; text-decoration:none;}
+    h2 a:hover { text-decoration:underline;}
+    h2.panel { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
+    background:transparent url(../images/separator-middlebar.png) repeat-x scroll left bottom; color:#FFA200; font-size:90%;
+    font-weight:normal; letter-spacing:0.1em; margin:40px 0 0; padding:0 0 20px 10px;}
+h3 { font-size:110%; font-weight:bold; margin:20px 0 0; padding:0;}
+h4 { font-size:100%; font-weight:bold;}
 
-h5 {
-    color:#000000;
-    font-size:200%;
-    font-weight:normal;
-    margin:2px 0 18px;
-    padding:0;
-}
-
-h2 {
-    -moz-background-clip:border;
-    -moz-background-inline-policy:continuous;
-    -moz-background-origin:padding;
-    background:transparent url(../images/separator-middlebar.png) repeat-x scroll left bottom;
-    clear:both;
-    color:#999999;
-    font-family:"Arial Narrow","News Gothic",Helvetica,sans-serif;
-    font-size:130%;
-    font-weight:normal;
-    margin:40px 0 0;
-    padding:0 0 17px;
-}
-
-h2 a {
-    color:#999999;
-    text-decoration:none;
-}
-
-h2 a:hover {
-    text-decoration:underline;
-}
-
-h2.panel {
-    -moz-background-clip:border;
-    -moz-background-inline-policy:continuous;
-    -moz-background-origin:padding;
-    background:transparent url(../images/separator-middlebar.png) repeat-x scroll left bottom;
-    color:#FFA200;
-    font-size:90%;
-    font-weight:normal;
-    letter-spacing:0.1em;
-    margin:40px 0 0;
-    padding:0 0 20px 10px;
-}
-
-h2 a {
-    text-decoration:none;
-}
-
-h3 {
-    font-size:110%;
-    font-weight:bold;
-    margin:20px 0 0;
-    padding:0;
-}
-
-h4 {
-    font-size:100%;
-    font-weight:bold;
-}
-
-a { color:#FF6600;}
-
-p.about { font-size:16px; margin: 20px 100px 0 100px;}
+p.about { font-size:16px; margin: 20px 100px 0 100px;}  
+  p.about a { text-decoration:none;}
+  p.italic { font-style: italic;}  
+    
+.notice { font-size: 20px; color:green;}

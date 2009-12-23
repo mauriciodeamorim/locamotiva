@@ -1,14 +1,18 @@
-- Internacionalização
-- Imagem por usuário
-- Sistema para subir arquivos automaticamente
-- Teste de cucumber
-- Refatoracao nos specs
-- login e senha
-- sistema administrativo com autenticacao e autorizacao
-- personalizar paginacao
-- paginacao com Ajax
-- busca diversas
-- melhoria do layout
-- atualizacao da base com provas e resultados de 2009
-- corrigir cor dos links após clicado para manter a cor inicial
+Backlog
+
+Internacionalização
+Imagem por usuário
+Sistema para subir arquivos automaticamente
+Testes de cucumber
+Melhorar testes unitários
+Login e senha
+Sistema administrativo com autenticacao e autorizacao
+Personalizar paginacao
+Paginar com Ajax
+Buscas diversas
+Melhorar layout
+Melhorar css
+Atualizar base com provas e resultados de 2008 e 2009
+cross-browser 
+  não funciona corretamente no Opera 10
 

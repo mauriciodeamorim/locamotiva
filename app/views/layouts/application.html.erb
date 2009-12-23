@@ -14,14 +14,14 @@
 			    <li>|</li>
 					<li><%= link_to "Provas", races_path %></li>
 			    <li>|</li>
-					<li><%= link_to "Atletas", athletes_path %></li>
+					<li><%= link_to "Projeto", '/about' %></li>
 			</ul>
 	  </div>
 		<div id="logo"><%= link_to "Locamotiva", races_path %></div>		
 
 		<div id="content" class="internal">
+			<div class="notice"><%= flash[:notice] %></div>
 			<%= yield  %>
-			<p style="color: green"><%= flash[:notice] %></p>			
 		  <form action="/search" id="search_form" method="get">
 		      Busca <input name="q" type="search"> <input value="Search" type="submit">
 		  </form>
@@ -31,8 +31,6 @@
 					<li><%= link_to "Resultados", results_path %></li>
 			    <li> | </li>
 					<li><%= link_to "Provas", races_path %></li>
-			    <li> | </li>
-					<li><%= link_to "Atletas", athletes_path %></li>
 					<li> | </li>
 					<li><%= link_to "Projeto", '/about' %></li>
 			</ul>
