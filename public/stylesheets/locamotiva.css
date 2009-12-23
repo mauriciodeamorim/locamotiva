@@ -80,5 +80,6 @@ p.about { font-size:16px; margin: 20px 100px 0 100px;}
   p.about a { text-decoration:none; color:#EA5D0F;}
   p.about a:visited { color:#EA5D0F;}
   p.italic { font-style: italic;}  
-    
+  
+#about_title {text-align:center; width:900px; margin:0 auto;}    
 .notice { font-size: 20px; color:green;}
