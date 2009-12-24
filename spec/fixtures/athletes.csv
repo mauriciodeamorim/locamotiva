@@ -1,55 +1,55 @@
-Id  Name	Apelido	Sex	birthday	phone	CPF	email
-1	Mauricio de Amorim	null	m	null	null	null	null
-2	Fernando Hamasaki de Amorim	null	m	null	null	null	null
-3	Thiago Danilo Rolim Oquendo	null	m	null	null	null	null
-4	Luciano Francisco Bento da Silva	null	m	null	null	null	null
-5	Felipe Castelo Branco	null	m	null	null	null	null
-6	Luiz Henrique Ozaki	null	m	null	null	null	null
-7	Rafael Silva Nascimento	null	m	null	null	null	null
-8	Flávia Cristina dos Santos	null	f	null	null	null	null
-9	Angélica França	null	f	null	null	null	null
-10	Diego Laranjeira	null	m	null	null	null	null
-11	Glauco de Oliveira Pinto	null	m	null	null	null	null
-12	Carlos Eduardo Eugênio	null	m	null	null	null	null
-13	Digão	Rodrigo Lariente Ortiz	m	null	null	null	null
-14	Z_EXCLUIDO	Patricia Hamasaki de Amorim	f	null	null	null	null
-15	Alexandre N. Catão	null	m	null	null	null	null
-17	Sueli Marini Mattos	null	f	null	null	null	null
-18	Esther Herrera	null	f	null	null	null	null
-20	Jamila Silva	null	f	null	null	null	null
-21	Alexandre U. dos Anjos	null	m	null	null	null	null
-22	Vagner Medeiros da Silva	null	m	null	null	null	null
-23	Jennifer Melo	null	f	null	null	null	null
-24	Z_EXCLUIDO	Cristhiano Matheus Lisboa (BL)	m	null	null	null	null
-25	Cristiano Miranda	null	m	null	null	null	null
-27	Z_EXCLUIDO	Tico primo do Fernando	m	null	null	null	null
-28	Marina Gimenez	null	f	null	null	null	null
-29	Aline Goldsztejn	null	f	null	null	null	null
-30	Roberto Reis	null	M	null	null	null	null
-31	José Augusto Militão	null	M	null	null	null	null
-32	Z_EXCLUIDO	Irmão Jeniffer Reginaldo Melo	M	null	null	null	null
-33	Alexandre Bacci	null	M	null	null	null	null
-34	Allison Soares	null	M	null	null	null	null
-36	Bruno Dias Ferreira	null	M	null	null	null	null
-37	Henrique Soejima	null	M	null	null	null	null
-38	Wellington Justino Amaro 	null	M	null	null	null	null
-40	Marco Fonseca 	null	M	null	null	null	null
-41	Verônica S. Silva Gomes	null	F	null	null	null	null
-42	Marina Silva	null	F	null	null	null	null
-43	Leticia Polleti	null	F	null	null	null	null
-44	Daniele Dias	null	F	null	null	null	null
-45	Carlos Guiner Pereira	null	M	null	null	null	null
-46	Maciel Moraes	null	M	null	null	null	null
-47	Waldemar Kertsman	null	M	null	null	null	null
-48	Rafael Gajardo	null	M	null	null	null	null
-49	Paula Carrasco	null	F	null	null	null	null
-50	André Lima	null	M	null	null	null	null
-51	Rodrigo Lopes	null	M	null	null	null	null
-52	Adauto Vieira	null	M	null	null	null	null
-53	Eduardo Martinez	null	M	null	null	null	null
-54	Rodrigo Scotto	null	M	null	null	null	null
-55	 Luiz Fernando G. de Souza 	null	M	null	null	null	null
-56	Cleber da Cunha Lobo	null	M	null	null	null	null
-57	Karina Figueiredo	null	F	null	null	null	null
-58	Renato Prado Lopes	null	M	null	null	null	null
-59	André Pimentel	null	M	null	null	null	null
+Id, Name, nick, Sex, birthday, phone, CPF, email
+1, Mauricio de Amorim, null, M, null, null, null, null
+2, Fernando Hamasaki de Amorim, null, M, null, null, null, null
+3, Thiago Danilo Rolim Oquendo, null, M, null, null, null, null
+4, Luciano Francisco Bento da Silva, null, M, null, null, null, null
+5, Felipe Castelo Branco, null, M, null, null, null, null
+6, Luiz Henrique Ozaki, null, M, null, null, null, null
+7, Rafael Silva Nascimento, null, M, null, null, null, null
+8, Flávia Cristina dos Santos, null, F, null, null, null, null
+9, Angélica França, null, F, null, null, null, null
+10, Diego Laranjeira, null, M, null, null, null, null
+11, Glauco de Oliveira Pinto, null, M, null, null, null, null
+12, Carlos Eduardo Eugênio, null, M, null, null, null, null
+13, Digão, Rodrigo Lariente Ortiz, M, null, null, null, null
+14, Z_EXCLUIDO, Patricia Hamasaki de AmoriM, F, null, null, null, null
+15, Alexandre N. Catão, null, M, null, null, null, null
+17, Sueli Marini Mattos, null, F, null, null, null, null
+18, Esther Herrera, null, F, null, null, null, null
+20, Jamila Silva, null, F, null, null, null, null
+21, Alexandre U. dos Anjos, null, M, null, null, null, null
+22, Vagner Medeiros da Silva, null, M, null, null, null, null
+23, Jennifer Melo, null, F, null, null, null, null
+24, Z_EXCLUIDO, Cristhiano Matheus Lisboa (BL), M, null, null, null, null
+25, Cristiano Miranda, null, M, null, null, null, null
+27, Z_EXCLUIDO, Tico primo do Fernando, M, null, null, null, null
+28, Marina Gimenez, null, F, null, null, null, null
+29, Aline Goldsztejn, null, F, null, null, null, null
+30, Roberto Reis, null, M, null, null, null, null
+31, José Augusto Militão, null, M, null, null, null, null
+32, Z_EXCLUIDO, Irmão Jeniffer Reginaldo Melo, M, null, null, null, null
+33, Alexandre Bacci, null, M, null, null, null, null
+34, Allison Soares, null, M, null, null, null, null
+36, Bruno Dias Ferreira, null, M, null, null, null, null
+37, Henrique Soejima, null, M, null, null, null, null
+38, Wellington Justino Amaro , null, M, null, null, null, null
+40, Marco Fonseca , null, M, null, null, null, null
+41, Verônica S. Silva Gomes, null, F, null, null, null, null
+42, Marina Silva, null, F, null, null, null, null
+43, Leticia Polleti, null, F, null, null, null, null
+44, Daniele Dias, null, F, null, null, null, null
+45, Carlos Guiner Pereira, null, M, null, null, null, null
+46, Maciel Moraes, null, M, null, null, null, null
+47, Waldemar Kertsman, null, M, null, null, null, null
+48, Rafael Gajardo, null, M, null, null, null, null
+49, Paula Carrasco, null, F, null, null, null, null
+50, André Lima, null, M, null, null, null, null
+51, Rodrigo Lopes, null, M, null, null, null, null
+52, Adauto Vieira, null, M, null, null, null, null
+53, Eduardo Martinez, null, M, null, null, null, null
+54, Rodrigo Scotto, null, M, null, null, null, null
+55, Luiz Fernando G. de Souza , null, M, null, null, null, null
+56, Cleber da Cunha Lobo, null, M, null, null, null, null
+57, Karina Figueiredo, null, F, null, null, null, null
+58, Renato Prado Lopes, null, M, null, null, null, null
+59, André Pimentel, null, M, null, null, null, null

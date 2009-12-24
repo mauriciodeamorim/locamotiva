@@ -23,7 +23,7 @@
     <% for result in @results %>
       <tr>
         <td><%=h result.start_number %></td>
-        <td><%=h result.athlete.name %></td>
+        <td style="text-align: left; padding-left: 10px;"><%=h result.athlete.name %></td>
         <td><%=h result.official_time.strftime("%H:%M:%S") %></td>
         <td><%=h result.liquid_time.strftime("%H:%M:%S")%></td>
         <td><%=h result.class_general %></td>
