@@ -6,7 +6,7 @@
 	      <div class="big_date"><% if race.date %><%= race.date.strftime('%d') %><% end %></div>
 	      <div class="big_date"><% if race.date %><%= race.date.strftime('%b') %><% end %></div>
 		  </div>
-		  <div class="countdown"> </div>
+		  <div class="countdown">20<% if race.date %><%= race.date.strftime('%y') %><% end %></div>
 	  </div>
 	  <div class='race_title'><%= link_to race.name, result_path(race.id) %></div>
     <div class='race_title black'><%=h race.distance %></div>

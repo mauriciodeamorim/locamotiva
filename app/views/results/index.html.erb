@@ -6,7 +6,7 @@
 	        <div class="big_date"><%= @last_race.date.strftime('%d') %></div>
 	        <div class="big_date"><%= @last_race.date.strftime('%b') %></div>
 		    </div>
-		    <div class="countdown"> </div>
+		    <div class="countdown">20<%= @last_race.date.strftime('%y') %></div>
 	    </div>
       <div class="race_title"><%= @last_race.name %></div>
       <div class="race_title black"><%= @last_race.distance %></div>
@@ -24,7 +24,7 @@
     <% for result in @results %>
       <tr>
         <td><%=h result.start_number %></td>
-        <td style="padding: 10px; text-alignment: left;"><%=h result.athlete.name %></td>
+        <td class="align_left"><%=h result.athlete.name %></td>
         <td><%=h result.official_time.strftime("%H:%M:%S") %></td>
         <td><%=h result.liquid_time.strftime("%H:%M:%S")%></td>
         <td><%=h result.class_general %></td>

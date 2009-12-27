@@ -65,11 +65,11 @@ div#user_nav { font-size: 0.9em; float: right; padding-right: 30px;}
 /*new class for date*/
 .date_box { float:left; font-size:11px; font-weight:bold;  margin:0 12px 15px 0; text-align:center; width:77px;}
     .date_box .date { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
-                     background:transparent url(../images/date_box-black-bg.png) no-repeat scroll left top; color:white; margin:0; padding:10px 0;}
-    .date_box .date .big_date { color:#FFF; display:block; font-size:22px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
-    .date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
-                          background:transparent url(../images/date_box-orange-bg.png) no-repeat scroll left bottom; color:white; padding:4px 0 8px;}
-/*form { margin:0; padding:0;}*/
+                     background:transparent url(../images/date_box-black-bg.png) no-repeat scroll left top; color:white; margin:0; padding:4px 0;}
+    .date_box .date .big_date { color:#FFF; display:block; font-size:20px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
+    .date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;font-size:13px;
+                          background:transparent url(../images/date_box-orange-bg.png) no-repeat scroll left bottom; color:white; padding:0px 0 3px;
+                          letter-spacing: 1px;}
 
 h1 { color:#EA5D0F; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
 h3 { font-size:110%; font-weight:bold; margin:20px 0 0; padding:0;}
