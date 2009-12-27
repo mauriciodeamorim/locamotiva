@@ -7,7 +7,7 @@ class ResultsController < ApplicationController
 
   def show
     @race = Race.find(params[:id])
-    @results = Result.find_all_by_race_id(@race.id)
+    @results = Result.find_all_by_race_id(@race.id, :order => "class_general ASC")
 
     respond_to do |format|
       format.html # show.html.erb

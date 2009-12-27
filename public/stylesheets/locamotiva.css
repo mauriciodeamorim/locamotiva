@@ -6,10 +6,10 @@ body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-s
 * html #tudo { height: 100%; /* hack para IE6 que trata height como min-height */	}
 
 #content { padding-bottom: 30px; }
-.internal {	padding-left:20px; padding-top:25px; clear:both; background-color: #FFF;	min-height: 100%; }
+.internal {	padding-left:20px; padding-top:10px; clear:both; background-color: #FFF;	min-height: 100%; }
 #search_form { visibility:hidden; }
 
-#footer { position: absolute;	bottom: 0; text-align: center; min-height:65px; background-color: #000; width: 100%; padding-top: 10px; }
+#footer { position: absolute; bottom: 0; text-align: center; min-height:65px; background-color: #000; width: 100%; padding-top: 10px; }
   #footer a:visited{ color: #FF6600;}
 .footer, ul { font-size: 1.0em; }
   .footer, ul, li { display: inline; /*color: #FFAA06;*/ }
@@ -35,7 +35,7 @@ body, p, ol, ul, td { font-family: verdana, arial, helvetica, sans-serif; font-s
       #menu ul li div a:visited { color: #FF8C00;}
       #menu ul li div a:hover {color: #FF8C00; background-color: #000;}
             
-.race, td { color: gray; font-size: 20px; padding: 5px; clear: both;}
+.race, td { color: gray; font-size: 20px; padding: 0 5px 5px 5px; clear: both;}
 .race_black td { color: black;}
 .race_title { color:#EA5D0F; font-weight:normal; font-size:180%; float:left; padding-top:20px; margin:2px 0 15px;}
   .race_title a { color:#EA5D0F; text-decoration: none;}
@@ -63,7 +63,7 @@ pre { background-color: #eee; padding: 10px; font-size: 11px;}
 div#user_nav { font-size: 0.9em; float: right; padding-right: 30px;}
 
 /*new class for date*/
-.date_box { float:left; font-size:11px; font-weight:bold;  margin:0 12px 15px 0; text-align:center; width:77px;}
+.date_box { float:left; font-size:11px; font-weight:bold;  margin:0 12px 5px 0; text-align:center; width:77px;}
     .date_box .date { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
                      background:transparent url(../images/date_box-black-bg.png) no-repeat scroll left top; color:white; margin:0; padding:4px 0;}
     .date_box .date .big_date { color:#FFF; display:block; font-size:20px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
@@ -74,7 +74,7 @@ div#user_nav { font-size: 0.9em; float: right; padding-right: 30px;}
 h1 { color:#EA5D0F; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
 h3 { font-size:110%; font-weight:bold; margin:20px 0 0; padding:0;}
 h4 { font-size:100%; font-weight:bold;}
-h5 { color:#000000; font-size:200%; font-weight:normal; margin:2px 0 18px; padding:0;}
+h5 { color:#000000; font-size:160%; font-weight:normal; margin:0 0 5px; padding:0;}
 
 p.about { font-size:16px; margin: 20px 100px 0 100px;}  
   p.about a { text-decoration:none; color:#EA5D0F;}

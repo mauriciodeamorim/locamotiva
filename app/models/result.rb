@@ -4,10 +4,11 @@ class Result < ActiveRecord::Base
  
   private
   def self.last_race
-    Race.find(:last, :order => "date ASC")
+    race = Race.find(:last, :order => "date ASC")
+    
   end
   
   def self.by_race
-    self.last_race.results.find(:all, :order => "start_number ASC")
+    self.last_race.results.find(:all, :order => "class_general ASC")
   end
 end
