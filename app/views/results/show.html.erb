@@ -27,7 +27,7 @@
         <td class="align_left"><%=h result.athlete.name %></td>
         <td><%=h result.official_time.strftime("%H:%M:%S") %></td>
         <td><%=h result.liquid_time.strftime("%H:%M:%S")%></td>
-        <td><% if result.pace %><%=h result.pace.strftime("%H:%M:%S")%><% end %></td>                
+        <td><% if result.pace %><%=h result.pace.strftime("%H:%M")%><% end %></td>                
         <td><%=h result.class_general %></td>
       </tr>
     <% end %>
