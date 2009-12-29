@@ -67,7 +67,7 @@ div#user_nav { font-size: 0.9em; float: right; padding-right: 30px;}
     .date_box .date { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;
                      background:transparent url(../images/date_box-black-bg.png) no-repeat scroll left top; color:white; margin:0; padding:4px 0;}
     .date_box .date .big_date { color:#FFF; display:block; font-size:20px; margin:0; padding:0;} /* color:#FFDD41; color:#FFAA06;*/ 
-    .date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;font-size:13px;
+    .date_box .countdown { -moz-background-clip:border; -moz-background-inline-policy:continuous; -moz-background-origin:padding;font-size:18px;
                           background:transparent url(../images/date_box-orange-bg.png) no-repeat scroll left bottom; color:white; padding:0px 0 3px;
                           letter-spacing: 1px;}
 
