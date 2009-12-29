@@ -1,0 +1,19 @@
+==.Locamotiva Runners
+
+
+
+== DESCRIPTION
+
+Project to organize the results obtained by the racing team Locamotiva.
+
+== INSTALATION
+
+Clone the project, make a copy of the database.yml.example and then rename it to database.yml. 
+
+== CONFIGURATION
+
+
+
+
+
+Start date 11/13/2009
