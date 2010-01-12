@@ -11,16 +11,14 @@ h5 { color:#000000; font-size:160%; font-weight:normal; margin:0 0 5px; padding:
 
 #container { 	min-height: 100%; position: relative;	}
 * html #tudo { height: 100%; /* hack para IE6 que trata height como min-height */	}
- 
-#menu { text-align: center; position: relative; _height: 100%; width: 100%; padding-bottom: -40px; font-size: 2.2em; padding: 0;  background-color: #000;}
+
+.logo {position: absolute; margin: 0; top:0px; padding:0 0 0 0px;}
+  .logo, a, img { border: none;} 
+#menu { text-align: center; position: relative; _height: 100%; width: 100%; padding-bottom: -40px; font-size: 2em; padding: 0;  background-color: #000; background-image:url(../images/header.png)}
   #menu ul { font-size: 1.2em; margin: 0 auto; text-align: center;}
     #menu ul li { display: inline; line-height: 2.0em; padding: 0 10px 0 0;}
       #menu ul li a { color: #fff; text-decoration: none; padding: 5px 10px;}
       #menu ul li a:hover {/*  color: #FFF000;#FFF6BF;#4B4B4B*/ color: #000; background-color: #FFAA06;}
-      #menu ul li div { position: absolute; margin: 0; top:0px; padding:0 0 0 25px; font-size:40px;}
-      #menu ul li div a { text-decoration: none; background-color: #000;}
-      #menu ul li div a:visited { color: #FF8C00;}
-      #menu ul li div a:hover {color: #FF8C00; background-color: #000;}
 
 #content { padding-bottom: 30px; }
 .internal {	padding-left:20px; padding-top:10px; clear:both; background-color: #FFF;	min-height: 100%; }
@@ -37,7 +35,7 @@ h5 { color:#000000; font-size:160%; font-weight:normal; margin:0 0 5px; padding:
   .pagination a { text-decoration: none; background: #FFAA06; color: #000; border: 1px solid #FFAA06; }
     .pagination a:hover, .pagination a:focus { color: #FFF; border-color: #000; }
 
-#footer { position: absolute; bottom: 0; text-align: center; min-height:65px; background-color: #000; width: 100%; padding-top: 10px; }
+#footer { position: absolute; bottom: 0; text-align: center; min-height:65px; background-color: #000; width: 100%; padding-top: 10px; background-image:url(../images/header_footer.png);}
   #footer ul li a { color: #FF6600;}
   #footer a:visited{ color: #FF6600;}
 .footer, ul { font-size: 1.0em; }
