@@ -9,10 +9,11 @@ Login e senha
 Sistema administrativo com autenticacao e autorizacao
 Personalizar paginacao
 Paginar com Ajax
+Ordenacao por nome do campo
 Buscas diversas
 Melhorar layout
-Melhorar css
 Atualizar base com provas e resultados de 2008 e 2009
 cross-browser 
   não funciona corretamente no Opera 10
+  testar nas versoes 7 e 8 do IE
 
