@@ -4,5 +4,5 @@ Feature: Show results
     I want to show results in the first page
     
 Scenario: Show results by race
-    When I go to the main page
-    Then I should see "Nome da última prova"     
+    When I go to the about page
+    Then I should not see "locamotiva"     
