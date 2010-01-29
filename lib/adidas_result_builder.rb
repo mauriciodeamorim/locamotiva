@@ -26,10 +26,10 @@ class AdidasResultBuilder
     end
 
     date = "20100117"
-    id = 0 #find_id_athlete
+    id = 0
     start_number = atleta[3]
     category = atleta[11]
-    team = atleta[7]      
+    team = 'Locamotiva' #atleta[7]      
     liquid_time = date + atleta[9].chop.chop.delete(':').delete('.')
     official_time = date + atleta[15].chop.chop.delete(':').delete('.')
     class_general = atleta[17]
@@ -39,11 +39,29 @@ class AdidasResultBuilder
     distance =  atleta[13] + "m"
     substitute = ""
     notes = ""
-    athlete_id = id_locamotiva
-    race_id = 38
+    athlete_id = id_locamotiva  #find_id_athlete
+    race_id = 39
+
+    #Data in SuperIncricoes format
+#    hash = {
+#            :start_number => atleta[3],
+#            :sex => '',
+#            :team => atleta[7],
+#            :liquid_time => date + atleta[9].chop.chop.delete(':').delete('.'),
+#            :category => atleta[11],
+#            :distance =>  atleta[13] + "m",
+#            :control_time => date  #verificar como encontrar este tempo
+#            :official_time => date + atleta[15].chop.chop.delete(':').delete('.'),
+#            :class_general => atleta[17],
+#            :class_category => atleta[19],
+#            :class_sex => atleta[21],
+#            :pace => date + atleta[23].delete(':')[2..5],
+#            :velocity => ""
+#            }
+
 
 #    result = "id, start_number, category, team, liquid_time, official_time, class_general, class_sex, class_category, pace, distance, substitute, notes, athlete_id, race_id"            
-    result = "#{id},#{start_number},#{category},#{team},#{liquid_time},#{official_time},#{class_general},#{class_sex},#{class_category},#{pace},#{distance},#{substitute},#{notes},#{athlete_id},#{race_id}"
+    result = "#{id},#{start_number},'#{category}','#{team}',#{liquid_time},#{official_time},#{class_general},#{class_sex},#{class_category},#{pace},'#{distance}','#{substitute}','#{notes}',#{athlete_id},#{race_id}"
 
 #  1,518603,"M3539","Locamotiva",20081028004627,20081028004827,973,916,166,20081028043800,"10Km",,,1,3
   end
@@ -70,22 +88,22 @@ class AdidasResultBuilder
 #                      "Mauricio Aniche",
 #                      "Allisson Soares"]
 a = []
-a << abre2("Glauco de Oliveira", 0)
-a << abre2("Fernando Hamasaki", 0) unless nil
+a << abre2("Glauco de Oliveira Pinto", 11)
+a << abre2("Fernando Hamasaki de Amorim", 2) unless nil
+a << abre2("Patricia Hamasaki de Amorim", 14) unless nil
 a << abre2("Mauricio Amorim", 1)
-a << abre2("Luciano Silva", 0)
-#a << abre2 "Rodrigo Ortiz"
-#a << abre2 "THIAGO DANILO ROLIM OQUENDO"
-#a << abre2 "Adauto Vieira"
-#a << abre2 "Maciel Moraes"
-#a << abre2 "Paula Carrasco"
+a << abre2("Luciano Silva", 4)
+a << abre2("Rodrigo Ortiz", 13)
+a << abre2("THIAGO DANILO ROLIM OQUENDO", 3)
+a << abre2("Adauto Vieira Diniz Junior", 52)
+a << abre2("Maciel Moraes", 46)
+a << abre2("Paula Carrasco", 49)
 #a << abre2 "Jennifer Melo"
-#a << abre2 "Daniele Dias"
-#a << abre2 "Danielle Dias"
-#a << abre2 "Mauricio Aniche"
-#a << abre2 "Allisson Soares"
+a << abre2("Daniele Dias", 44)
+a << abre2("Mauricio Finavaro Aniche", 60)
+a << abre2("Allisson Soares", 34)
 #a << abre2("Renato Lopes") unless nil
-                      
+    a                  
   end  
   
 end

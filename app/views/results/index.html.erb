@@ -19,6 +19,7 @@
       <td>Tempo líquido</td>
       <td>Ritmo</td>
       <td>Classificação</td>
+      <td>Distância</td>
     </tr>
     <% for result in @results %>
       <tr>
@@ -28,6 +29,7 @@
         <td><%=h result.liquid_time.strftime("%H:%M:%S")%></td>
         <td><% if result.pace %><%=h result.pace.strftime("%H:%M")%><% end %></td>
         <td><%=h result.class_general %></td>
+        <td><%=h result.distance %></td>        
       </tr>
     <% end %>
   </table><br />
