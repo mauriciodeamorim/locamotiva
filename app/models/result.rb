@@ -1,7 +1,7 @@
 class Result < ActiveRecord::Base
   belongs_to :race
   belongs_to :athlete
- 
+
 private
   def self.last_race
     race = Race.find(:last, :order => "date ASC")

@@ -10,7 +10,7 @@ doc
 *.gem
 *.tmproj
 log/*.log
-tmp/**/*
+
 config/database.yml
 coverage/*
 coverage.data
