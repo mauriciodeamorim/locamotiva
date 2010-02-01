@@ -1,0 +1,2 @@
+username, email, crypted_password, password_salt, persistence_token
+"mauricio","amorim@timedev.com","teste12","teste12","teste12"
