@@ -8,6 +8,7 @@ describe UsersController do
 
   describe "GET 'new'" do
     it "should be successful" do
+      controller.stub!(:require_user).and_return(true)
       get 'new'
       response.should be_success
     end

@@ -8,6 +8,7 @@ describe Admin::AthletesController do
 
   describe "GET index" do
     it "assigns all athletes as @athletes" do
+      controller.stub!(:require_user).and_return(true)
       Athlete.stub!(:find).with(:all).and_return([mock_athlete])
       get :index
       assigns[:athletes].should == [mock_athlete]

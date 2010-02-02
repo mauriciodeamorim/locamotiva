@@ -8,6 +8,7 @@ describe Admin::ResultsController do
 
   describe "GET index" do
     it "assigns all results as @results" do
+      controller.stub!(:require_user).and_return(true)
       Result.stub!(:find).with(:all).and_return([mock_result])
       get :index
       assigns[:results].should == [mock_result]
@@ -16,6 +17,7 @@ describe Admin::ResultsController do
 
   describe "GET show" do
     it "assigns the requested result as @result" do
+      controller.stub!(:require_user).and_return(true)
       Result.stub!(:find).with("37").and_return(mock_result)
       get :show, :id => "37"
       assigns[:result].should equal(mock_result)
@@ -24,6 +26,7 @@ describe Admin::ResultsController do
 
   describe "GET new" do
     it "assigns a new result as @result" do
+      controller.stub!(:require_user).and_return(true)
       Result.stub!(:new).and_return(mock_result)
       get :new
       assigns[:result].should equal(mock_result)
@@ -32,6 +35,7 @@ describe Admin::ResultsController do
 
   describe "GET edit" do
     it "assigns the requested result as @result" do
+      controller.stub!(:require_user).and_return(true)
       Result.stub!(:find).with("37").and_return(mock_result)
       get :edit, :id => "37"
       assigns[:result].should equal(mock_result)
@@ -42,12 +46,14 @@ describe Admin::ResultsController do
 
     describe "with valid params" do
       it "assigns a newly created result as @result" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:new).with({'these' => 'params'}).and_return(mock_result(:save => true))
         post :create, :result => {:these => 'params'}
         assigns[:result].should equal(mock_result)
       end
 
       it "redirects to the created result" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:new).and_return(mock_result(:save => true))
         post :create, :result => {}
         response.should redirect_to(admin_result_url(mock_result))
@@ -56,12 +62,14 @@ describe Admin::ResultsController do
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved result as @result" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:new).with({'these' => 'params'}).and_return(mock_result(:save => false))
         post :create, :result => {:these => 'params'}
         assigns[:result].should equal(mock_result)
       end
 
       it "re-renders the 'new' template" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:new).and_return(mock_result(:save => false))
         post :create, :result => {}
         response.should render_template('new')
@@ -74,18 +82,21 @@ describe Admin::ResultsController do
 
     describe "with valid params" do
       it "updates the requested result" do
+        controller.stub!(:require_user).and_return(true)
         Result.should_receive(:find).with("37").and_return(mock_result)
         mock_result.should_receive(:update_attributes).with({'these' => 'params'})
         put :update, :id => "37", :result => {:these => 'params'}
       end
 
       it "assigns the requested result as @result" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:find).and_return(mock_result(:update_attributes => true))
         put :update, :id => "1"
         assigns[:result].should equal(mock_result)
       end
 
       it "redirects to the result" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:find).and_return(mock_result(:update_attributes => true))
         put :update, :id => mock_result.id
         response.should redirect_to(admin_result_url(mock_result))
@@ -94,18 +105,21 @@ describe Admin::ResultsController do
 
     describe "with invalid params" do
       it "updates the requested result" do
+        controller.stub!(:require_user).and_return(true)
         Result.should_receive(:find).with("37").and_return(mock_result)
         mock_result.should_receive(:update_attributes).with({'these' => 'params'})
         put :update, :id => "37", :result => {:these => 'params'}
       end
 
       it "assigns the result as @result" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:find).and_return(mock_result(:update_attributes => false))
         put :update, :id => "1"
         assigns[:result].should equal(mock_result)
       end
 
       it "re-renders the 'edit' template" do
+        controller.stub!(:require_user).and_return(true)
         Result.stub!(:find).and_return(mock_result(:update_attributes => false))
         put :update, :id => "1"
         response.should render_template('edit')
@@ -116,12 +130,14 @@ describe Admin::ResultsController do
 
   describe "DELETE destroy" do
     it "destroys the requested result" do
+      controller.stub!(:require_user).and_return(true)
       Result.should_receive(:find).with("37").and_return(mock_result)
       mock_result.should_receive(:destroy)
       delete :destroy, :id => "37"
     end
 
     it "redirects to the results list" do
+      controller.stub!(:require_user).and_return(true)
       Result.stub!(:find).and_return(mock_result(:destroy => true))
       delete :destroy, :id => "1"
       response.should redirect_to(admin_results_url)
