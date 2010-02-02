@@ -105,5 +105,42 @@ a << abre2("Allisson Soares", 34)
 #a << abre2("Renato Lopes") unless nil
     a                  
   end  
-  
+ 
+ 
+    def bid(id_athlete)
+    
+    id_athlete = id_athlete.map {|dados| dados.gsub(/[' ']/,'%20')}
+
+    doc = Hpricot(open("http://superinscricoes.com.br/novo/resultados.php?acao_buscar=1&acao_site=resultados&id_cliente=12&id_evento=44&num_peito=#{id_athlete[0]}"))
+#doc = Hpricot(open("http://superinscricoes.com.br/novo/resultados.php?acao_buscar=1&acao_site=resultados&id_cliente=12&id_evento=44&id_resultado=#{id_athlete[0]}"))
+    cada = doc.search("//td[@class='fundo_nome_campo2']")      
+
+    atleta = []
+    i = 0
+    
+    cada.each do |dados|
+      atleta[i] = dados.inner_html
+      i = i + 1
+    end
+
+    date = "20100117"
+    id = 0
+    start_number = atleta[3]
+    category = atleta[11]
+    team = 'Locamotiva' #atleta[7]      
+    liquid_time = date + atleta[9].chop.chop.delete(':').delete('.')
+    official_time = date + atleta[15].chop.chop.delete(':').delete('.')
+    class_general = atleta[17]
+    class_sex = atleta[21]
+    class_category = atleta[19]
+    pace = date + atleta[23].delete(':')[2..5]
+    distance =  atleta[13] + "m"
+    substitute = ""
+    notes = ""
+    athlete_id = 0  #find_id_athlete
+    race_id = 39
+
+    result = "#{id},#{start_number},'#{category}','#{team}',#{liquid_time},#{official_time},#{class_general},#{class_sex},#{class_category},#{pace},'#{distance}','#{substitute}','#{notes}',#{athlete_id},#{race_id}"
+
+  end
 end
