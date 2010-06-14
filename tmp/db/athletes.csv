@@ -1,4 +1,4 @@
-Id, Name, nick, Sex, birthday, phone, CPF, email
+id, name, nick, Sex, birthday, phone, CPF, email
 1, Mauricio Amorim, Mauricio de Amorim, M, null, null, null, null
 2, Fernando Hamasaki de Amorim, null, M, null, null, null, null
 3, Thiago Danilo Rolim Oquendo, null, M, null, null, null, null
@@ -12,7 +12,7 @@ Id, Name, nick, Sex, birthday, phone, CPF, email
 11, Glauco de Oliveira Pinto, null, M, null, null, null, null
 12, Carlos Eduardo Eugênio, null, M, null, null, null, null
 13, Digão, Rodrigo Lariente Ortiz, M, null, null, null, null
-14, Patricia Hamasaki de Amorim, Patricia Hamasaki de AmoriM, F, null, null, null, null
+14, Patricia Hamasaki de Amorim, Patricia Hamasaki de Amorim, F, null, null, null, null
 15, Alexandre N. Catão, null, M, null, null, null, null
 17, Sueli Marini Mattos, null, F, null, null, null, null
 18, Esther Herrera, null, F, null, null, null, null
@@ -55,3 +55,5 @@ Id, Name, nick, Sex, birthday, phone, CPF, email
 59, André Pimentel, André Gabriel da Costa Pimentel, M, null, null, null, null
 60, Mauricio Finavaro Aniche, null, M, null, null, null, null
 61, André Silva Santos, null, M, null, null, null, null
+62, Miguel Perez, null, M, null, null, null, null
+63, Veronica S Silva Gomes, null, F, null, null, null, null

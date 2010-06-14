@@ -26,3 +26,39 @@ cucumber:
   database: db/test.sqlite3
   pool: 5
   timeout: 5000
+
+	development:
+	  adapter: mysql
+	  encoding: utf8
+	  reconnect: false
+	  database: runner_development
+	  pool: 5
+	  username: root
+	  password:
+	  socket: /tmp/mysql.sock
+
+	# Warning: The database defined as "test" will be erased and
+	# re-generated from your development database when you run "rake".
+	# Do not set this db to the same as development or production.
+	test: &TEST
+	  adapter: mysql
+	  encoding: utf8
+	  reconnect: false
+	  database: runner_test
+	  pool: 5
+	  username: root
+	  password:
+	  socket: /tmp/mysql.sock
+
+	production:
+	  adapter: mysql
+	  encoding: utf8
+	  reconnect: false
+	  database: runner_production
+	  pool: 5
+	  username: root
+	  password: 
+	  socket: /tmp/mysql.sock
+
+	cucumber:
+	  <<: *TEST
