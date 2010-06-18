@@ -1,44 +1,81 @@
 require "hpricot" 
 require "open-uri"
 
-class AdidasResultBuilder
+class Adidas
+
+  def athlete_result(event, athlete)
+    athlete_name = self.search_athlete athlete
+    event_page = Hpricot(open(page event, athlete_name))
+    x = each_athlete event_page
+    create_result build_result x
+  end
+
+  def search_athlete(athlete)
+    athlete.name.map {|dados| dados.gsub(/[' ']/,'%20')}
+  end
+
+  def page(event, athlete_name)
+    url = "http://superinscricoes.com.br/novo/resultados.php?"
+    action = url + "acao_buscar=1&acao_site=resultados&id_cliente=12&id_evento=#{event}&nome_atleta=#{athlete_name}"
+  end
   
+  def each_athlete(event_page)
+    event_page.search("//td[@class='tabela_celula']")
+  end
+  
+  def build_result(each_athlete)
+    atleta = []
+    i = 0
+    
+    each_athlete.each do |item|
+      atleta[i] = item.inner_html
+      i = i + 1
+    end
+    atleta
+  end
+
+  def create_result(build_result)
+    r = Result.new
+    # name = atleta[1]
+    atleta = build_result
+    date = "20100117" #Pegar a dados do evento http://superinscricoes.com.br/novo/index.php?acao_site=evento_exibir&id_evento=44
+    # id = 0
+    r.start_number = atleta[3].to_i
+    # r.category = atleta[11]
+    # r.team = 'Locamotiva' #atleta[7]      
+    # r.liquid_time = date + atleta[9].chop.chop.delete(':').delete('.') unless nil
+    # r.official_time = date + atleta[15].chop.chop.delete(':').delete('.') unless nil
+    # r.class_general = atleta[17]
+    # r.class_sex = atleta[21]
+    # r.class_category = atleta[19]
+    # r.pace = date + atleta[23].delete(':')[2..5]
+    r.distance =  atleta[13] + "m"
+    r.substitute = ""
+    r.notes = ""
+    r.race_id = 39
+    r.athlete_id = 1 #id_locamotiva  #find_id_athlete
+    r
+  end
+
+
   def abre2(athlete_name, id_locamotiva)
     
     athlete_name = athlete_name.map {|dados| dados.gsub(/[' ']/,'%20')}
 
-#    doc = []
-#    
-#    atleta.each do |xxx|
-#      doc = Hpricot(open("http://superinscricoes.com.br/novo/resultados.php?acao_buscar=1&acao_site=resultados&id_cliente=12&id_evento=44&nome_atleta=#{xxx}"))      
-#    end
+    toda_pagina = Hpricot(open("http://superinscricoes.com.br/novo/resultados.php?acao_buscar=1&acao_site=resultados&id_cliente=12&id_evento=44&nome_atleta=#{athlete_name[0]}"))
 
-# Fila Night Run 1a Etapa SP 2010
-# http://superinscricoes.com.br/novo/resultados.php?acao_buscar=1&acao_site=resultados&id_cliente=19&id_evento=68&nome_atleta=glauco%20de%20oliveira%20pinto
+    cada_atleta = toda_pagina.search("//td[@class='tabela_celula']") # conteudo de cada atleta
 
-#Como exibir um evento
-# http://superinscricoes.com.br/novo/index.php?acao_site=evento_exibir&id_evento=10
-
-
-
-
-    doc = Hpricot(open("http://superinscricoes.com.br/novo/resultados.php?acao_buscar=1&acao_site=resultados&id_cliente=12&id_evento=44&nome_atleta=#{athlete_name[0]}"))
-
-    # cada = doc.search("//td[@class='fundo_nome_campo2']")      
-    cada = doc.search("//td[@class='tabela_celula']")      
     atleta = []
     i = 0
     
-    cada.each do |dados|
-      atleta[i] = dados.inner_html
+    cada_atleta.each do |item|
+      atleta[i] = item.inner_html
       i = i + 1
     end
-    # p "--------------------------"
-    # p atleta[0]
-    # p "--------------------------"
-    # p atleta[1]
-    #     p "--------------------------"
-    date = "20100117"
+
+    name = atleta[1]
+    date = "20100117" #Pegar a dados do evento http://superinscricoes.com.br/novo/index.php?acao_site=evento_exibir&id_evento=44
     id = 0
     start_number = atleta[3]
     category = atleta[11]
@@ -72,13 +109,14 @@ class AdidasResultBuilder
 #            :velocity => ""
 #            }
 
-
 #    result = "id, start_number, category, team, liquid_time, official_time, class_general, class_sex, class_category, pace, distance, substitute, notes, athlete_id, race_id"            
     result = "#{id},#{start_number},'#{category}','#{team}',#{liquid_time},#{official_time},#{class_general},#{class_sex},#{class_category},#{pace},'#{distance}','#{substitute}','#{notes}',#{athlete_id},#{race_id}"
 
 #  1,518603,"M3539","Locamotiva",20081028004627,20081028004827,973,916,166,20081028043800,"10Km",,,1,3
   end
 
+
+  
   def find_id_athlete
     athlete = Athlete.new 
     athlete.find_by_name(athlete)
@@ -158,4 +196,21 @@ a << abre2("Luciano Silva", 4)
     result = "Nome: #{nome},#{id},#{start_number},'#{category}','#{team}',#{liquid_time},#{official_time},#{class_general},#{class_sex},#{class_category},#{pace},'#{distance}','#{substitute}','#{notes}',#{athlete_id},#{race_id}/n"
 
   end
+
+  def find_date(athlete_name)
+    athlete_name = athlete_name.map {|dados| dados.gsub(/[' ']/,'%20')}
+
+    toda_pagina = Hpricot(open("http://superinscricoes.com.br/novo/resultados.php?acao_buscar=1&acao_site=resultados&id_cliente=12&id_evento=44&nome_atleta=#{athlete_name[0]}"))
+
+    cada_atleta = toda_pagina.search("//td[@class='tabela_celula']") # conteudo de cada atleta
+    
+    atleta = []
+    i = 0
+    
+    cada_atleta.each do |item|
+      atleta[i] = item.inner_html
+      i = i + 1
+    end
+  end
+
 end

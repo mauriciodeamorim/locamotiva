@@ -16,6 +16,10 @@ config.action_controller.perform_caching             = false
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
 
+# Don't show SQL queries
+# Default mode is :debbug
+# config.log_level = :info
+
 # Better view to console
 require 'hirb'
 Hirb::View.enable
