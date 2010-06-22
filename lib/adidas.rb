@@ -40,7 +40,7 @@ class Adidas
     r = Result.new
     atleta = build_result
     name = atleta[1]
-    date = "20100117" #Pegar a dados do evento http://superinscricoes.com.br/novo/index.php?acao_site=evento_exibir&id_evento=44
+    date = race.date #Pegar a dados do evento http://superinscricoes.com.br/novo/index.php?acao_site=evento_exibir&id_evento=44
     r.start_number = atleta[3].to_i
     r.category = atleta[11]
     r.team = 'Locamotiva' #atleta[7]      
@@ -53,8 +53,8 @@ class Adidas
     r.distance =  atleta[13] + "m"
     r.substitute = ""
     r.notes = ""
-    r.race_id = 39
-    r.athlete_id = 1 #id_locamotiva  #find_id_athlete
+    r.race_id = race.id
+    r.athlete_id = athlete.id
     r
   end
 # result = "#{id},#{start_number},'#{category}','#{team}',#{liquid_time},#{official_time},#{class_general},#{class_sex},#{class_category},#{pace},'#{distance}','#{substitute}','#{notes}',#{athlete_id},#{race_id}"
