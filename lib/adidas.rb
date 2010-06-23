@@ -4,11 +4,11 @@ require "open-uri"
 class Adidas
 
   def build_result(race, athlete)
-    fill_result(result_by_name(each_athlete event_page(race, athlete)))
+    fill_result(slice_by_column(result_page(race, athlete)), race, athlete)
   end
 
-  def event_page(race, athlete)
-    Hpricot(open(page race, athlete))    
+  def result_page(race, athlete)
+    Hpricot(open(page race, athlete)).search("//td[@class='tabela_celula']")
   end
   
   def page(race, athlete)
@@ -20,43 +20,41 @@ class Adidas
   def blank_ascii_to_hexa(field)
     field.map {|item| item.gsub(/[' ']/,'%20')}
   end
-  
-  def each_athlete(event_page)
-    event_page.search("//td[@class='tabela_celula']")
-  end
    
-  def result_by_name(each_athlete)
-    atleta = []
-    i = 0
-    
-    each_athlete.each do |item|
-      atleta[i] = item.inner_html
-      i = i + 1
-    end
-    atleta
+  def slice_by_column(result_page)
+    result_page.map { |item| each_atleta = item.inner_html }
   end
 
-  def fill_result(build_result)
-    r = Result.new
-    atleta = build_result
-    name = atleta[1]
-    date = race.date #Pegar a dados do evento http://superinscricoes.com.br/novo/index.php?acao_site=evento_exibir&id_evento=44
-    r.start_number = atleta[3].to_i
-    r.category = atleta[11]
-    r.team = 'Locamotiva' #atleta[7]      
-    r.liquid_time = date + atleta[9].chop.chop.delete(':').delete('.') unless nil
-    r.official_time = date + atleta[15].chop.chop.delete(':').delete('.') unless nil
-    r.class_general = atleta[17]
-    r.class_sex = atleta[21]
-    r.class_category = atleta[19]
-    r.pace = date + atleta[23].delete(':')[2..5]
-    r.distance =  atleta[13] + "m"
-    r.substitute = ""
-    r.notes = ""
-    r.race_id = race.id
-    r.athlete_id = athlete.id
-    r
+  def fill_result(html_fields, race, athlete)
+    return if !html_fields[0]
+      r = Result.new
+      name = html_fields[1]
+      date = race.date.to_date.to_formatted_s.delete("-") #Pegar a dados do evento http://superinscricoes.com.br/novo/index.php?acao_site=evento_exibir&id_evento=44
+      r.start_number = html_fields[3].to_i
+      r.category = html_fields[11]
+      r.team = 'Locamotiva'      
+      r.liquid_time = date + html_fields[9].chop.chop.delete(':').delete('.') unless nil
+      r.official_time = date + html_fields[15].chop.chop.delete(':').delete('.') unless nil
+      r.class_general = html_fields[17]
+      r.class_sex = html_fields[21]
+      r.class_category = html_fields[19]
+      r.pace = date + html_fields[23].delete(':')[2..5]
+      r.distance =  html_fields[13] + "m"
+      r.substitute = ""
+      r.notes = ""
+      r.race_id = race.id
+      r.athlete_id = athlete.id
+      puts "----------- #{name} -----", r.inspect, "-----------"
+      r.save
   end
-# result = "#{id},#{start_number},'#{category}','#{team}',#{liquid_time},#{official_time},#{class_general},#{class_sex},#{class_category},#{pace},'#{distance}','#{substitute}','#{notes}',#{athlete_id},#{race_id}"
-#  1,518603,"M3539","Locamotiva",20081028004627,20081028004827,973,916,166,20081028043800,"10Km",,,1,3
+  
+  def search_all_athletes(race)
+    athletes = Athlete.find_all_by_id 1..7
+
+    athletes.each do |athlete|
+      build_result(race, athlete)
+    end
+    
+  end
+  
 end
