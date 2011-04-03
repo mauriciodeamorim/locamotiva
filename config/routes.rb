@@ -1,4 +1,5 @@
 Locamotiva::Application.routes.draw do
+  root :to => "races#index"
   resources :races
 
   # The priority is based upon order of creation:
