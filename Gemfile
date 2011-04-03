@@ -9,7 +9,6 @@ gem 'rails', '>= 3.0.5'
 gem 'mysql2'
 gem 'heroku'  
 gem 'devise'
-#gem 'nifty-generator'
 
 
 # Deploy with Capistrano
@@ -29,4 +28,5 @@ gem 'devise'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem 'rspec-rails'
+  gem 'nifty-generators'
 end
