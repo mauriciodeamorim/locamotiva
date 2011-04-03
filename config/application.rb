@@ -38,5 +38,6 @@ module Locamotiva
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.secret_token = '8800659a04f092c027a2063a94870d7148bf0e5311100721a051a4b2ac6872a5b5cf40a67234caefe77531e7ad1b8d11d5f3ecc59b1868e6414b0a3a7a0d5f58'
   end
 end
