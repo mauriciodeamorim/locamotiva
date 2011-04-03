@@ -7,9 +7,10 @@ gem 'rails', '>= 3.0.5'
 
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'mysql2'
+gem 'heroku'  
+gem 'devise'
+#gem 'nifty-generator'
 
-# Use unicorn as the web server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
