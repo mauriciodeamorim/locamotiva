@@ -1,6 +1,5 @@
 Locamotiva::Application.routes.draw do
-  devise_for :users
-
+  devise_for :users, :path_names => {:sign_in => "register"}
   root :to => "races#index"
   resources :races
 
