@@ -1,4 +1,6 @@
 class RacesController < ApplicationController
+
+  before_filter :authenticate_user!, :except => [:show, :index]
   # GET /races
   # GET /races.xml
   def index
