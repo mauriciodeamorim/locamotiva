@@ -1,0 +1,51 @@
+<h1>Listing results</h1>
+
+<table>
+  <tr>
+    <th>Start number</th>
+    <th>Category</th>
+    <th>Team</th>
+    <th>Liquid time</th>
+    <th>Official time</th>
+    <th>Class general</th>
+    <th>Class sex</th>
+    <th>Class category</th>
+    <th>Pace</th>
+    <th>Distance</th>
+    <th>Substitute</th>
+    <th>Notes</th>
+    <th>Race</th>
+    <th>User</th>
+    <th>Tshirt</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @results.each do |result| %>
+  <tr>
+    <td><%= result.start_number %></td>
+    <td><%= result.category %></td>
+    <td><%= result.team %></td>
+    <td><%= result.liquid_time %></td>
+    <td><%= result.official_time %></td>
+    <td><%= result.class_general %></td>
+    <td><%= result.class_sex %></td>
+    <td><%= result.class_category %></td>
+    <td><%= result.pace %></td>
+    <td><%= result.distance %></td>
+    <td><%= result.substitute %></td>
+    <td><%= result.notes %></td>
+    <td><%= result.race_id %></td>
+    <td><%= result.user_id %></td>
+    <td><%= result.tshirt %></td>
+    <td><%= link_to 'Show', result %></td>
+    <td><%= link_to 'Edit', edit_result_path(result) %></td>
+    <td><%= link_to 'Destroy', result, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Result', new_result_path %>

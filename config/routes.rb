@@ -1,6 +1,8 @@
 Locamotiva::Application.routes.draw do
+  resources :results
+
   devise_for :users, :path_names => {:sign_in => "register"}
-  root :to => "races#index"
+  root :to => "results#index"
   resources :races
 
   # The priority is based upon order of creation:

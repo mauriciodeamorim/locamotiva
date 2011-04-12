@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110406035132) do
+ActiveRecord::Schema.define(:version => 20110408032628) do
 
   create_table "races", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,26 @@ ActiveRecord::Schema.define(:version => 20110406035132) do
     t.string   "place"
     t.string   "distance"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "results", :force => true do |t|
+    t.string   "start_number"
+    t.string   "category"
+    t.string   "team"
+    t.datetime "liquid_time"
+    t.datetime "official_time"
+    t.integer  "class_general"
+    t.integer  "class_sex"
+    t.integer  "class_category"
+    t.datetime "pace"
+    t.string   "distance"
+    t.string   "substitute"
+    t.text     "notes"
+    t.integer  "race_id"
+    t.integer  "user_id"
+    t.string   "tshirt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
