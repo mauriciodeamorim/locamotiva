@@ -29,4 +29,5 @@ gem 'devise'
 group :development, :test do
   gem 'rspec-rails'
   gem 'nifty-generators'
+  gem 'hirb'
 end
