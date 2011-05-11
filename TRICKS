@@ -1,0 +1,10 @@
+Usando o HIRB
+
+Carregando o hirb no console manualmente e ativando tabelas
+require 'hirb'; Hirb.enable; extend Hirb::Console
+
+Adicionando os resultados a uma tabela
+users = User.all :order=>'id DESC'; table users
+
+Usando somente os campos necessarios
+table users, :fields=>[:id, :email]
