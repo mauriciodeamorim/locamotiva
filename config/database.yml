@@ -1,6 +1,6 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: locamotiva_development
+  database: locamotiva28locaweb_development
   pool: 5
   socket: /tmp/mysql.sock

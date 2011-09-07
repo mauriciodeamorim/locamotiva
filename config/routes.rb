@@ -1,10 +1,14 @@
 Locamotiva::Application.routes.draw do
+  resources :athletes
+
   resources :results
 
   devise_for :users, :path_names => {:sign_in => "register"}
   root :to => "results#index"
   resources :races
+  resources :calendars
 
+  match '/mauricio', :controller => 'results', :action => 'new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

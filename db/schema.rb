@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110408032628) do
+ActiveRecord::Schema.define(:version => 20110907043852) do
+
+  create_table "athletes", :force => true do |t|
+    t.string   "name"
+    t.string   "sex"
+    t.date     "birthday"
+    t.string   "cpf"
+    t.string   "phone"
+    t.string   "nick"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "races", :force => true do |t|
     t.string   "name"
@@ -19,11 +31,13 @@ ActiveRecord::Schema.define(:version => 20110408032628) do
     t.string   "place"
     t.string   "distance"
     t.string   "url"
+    t.boolean  "showme"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "results", :force => true do |t|
+    t.string   "search_name"
     t.string   "start_number"
     t.string   "category"
     t.string   "team"
@@ -36,9 +50,10 @@ ActiveRecord::Schema.define(:version => 20110408032628) do
     t.string   "distance"
     t.string   "substitute"
     t.text     "notes"
+    t.string   "tshirt"
     t.integer  "race_id"
     t.integer  "user_id"
-    t.string   "tshirt"
+    t.integer  "athlete_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -63,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20110408032628) do
     t.string   "rg"
     t.string   "teamcode"
     t.string   "mobile"
+    t.boolean  "former_official"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

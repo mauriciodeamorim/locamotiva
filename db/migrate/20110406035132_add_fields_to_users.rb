@@ -8,9 +8,11 @@ class AddFieldsToUsers < ActiveRecord::Migration
     add_column :users, :rg, :string
     add_column :users, :teamcode, :string
     add_column :users, :mobile, :string
+    add_column :users, :former_official, :boolean
   end
 
   def self.down
+    remove_column :users, :former_official
     remove_column :users, :mobile
     remove_column :users, :teamcode
     remove_column :users, :rg

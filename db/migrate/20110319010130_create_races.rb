@@ -7,6 +7,7 @@ class CreateRaces < ActiveRecord::Migration
       t.string :place
       t.string :distance
       t.string :url
+      t.boolean :showme
 
       t.timestamps
     end

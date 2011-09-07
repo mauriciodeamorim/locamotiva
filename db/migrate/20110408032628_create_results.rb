@@ -1,6 +1,7 @@
 class CreateResults < ActiveRecord::Migration
   def self.up
     create_table :results do |t|
+      t.string :search_name
       t.string :start_number
       t.string :category
       t.string :team
@@ -13,9 +14,10 @@ class CreateResults < ActiveRecord::Migration
       t.string :distance
       t.string :substitute
       t.text :notes
+      t.string :tshirt
       t.integer :race_id
       t.integer :user_id
-      t.string :tshirt
+      t.integer :athlete_id
 
       t.timestamps
     end
