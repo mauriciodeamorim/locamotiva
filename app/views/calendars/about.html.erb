@@ -1,0 +1,12 @@
+<h1>Sobre alguma coisa</h1>
+
+<h1>
+<% @races.each do |race| %>
+    <%= race.name %>
+    <%= race.stage %>
+    <%= race.date %>
+    <%= race.place %>
+    <%= race.distance %>
+    <%= race.url %>
+<% end %>
+</h1>
