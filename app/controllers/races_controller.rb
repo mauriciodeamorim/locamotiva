@@ -34,6 +34,15 @@ class RacesController < ApplicationController
     end
   end
 
+  def calendar
+    @races = Race.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @races }
+    end
+  end
+
   # GET /races/1/edit
   def edit
     @race = Race.find(params[:id])
